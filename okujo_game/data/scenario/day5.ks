@@ -251,6 +251,5 @@
 [_tb_end_tyrano_code]
 
 [chara_hide_all  time="1000"  wait="true"  ]
-
 [jump  storage="day6.ks"  target="*day6_start"  ]
 [s  ]
