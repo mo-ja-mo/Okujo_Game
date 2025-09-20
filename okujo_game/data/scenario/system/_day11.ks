@@ -1,0 +1,8 @@
+[preload  storage="./data/bgimage/room_cloudy.jpg"  ]
+[preload  storage="./data/bgimage/okujyo_cloudy.png"  ]
+[preload  storage="./data/fgimage/chara/1/mzk_akire_aozame.png"  ]
+[preload  storage="./data/fgimage/chara/2/rui_aseri.png"  ]
+[preload  storage="./data/bgimage/odoriba.png"  ]
+[preload  storage="./data/fgimage/chara/1/mzk_mouthopen.png"  ]
+[preload  storage="./data/bgimage/okujo_rainy.png"  ]
+[return]
