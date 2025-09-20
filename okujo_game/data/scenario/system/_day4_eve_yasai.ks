@@ -1,8 +1,0 @@
-[preload  storage="./data/bgimage/room.jpg"  ]
-[preload  storage="./data/bgimage/okujyo_normal.png"  ]
-[preload  storage="./data/fgimage/chara/2/rui_aseri.png"  ]
-[preload  storage="./data/fgimage/chara/2/base.png"  ]
-[preload  storage="./data/fgimage/chara/1/mzk_komari.png"  ]
-[preload  storage="./data/fgimage/chara/1/mzk_smile.png"  ]
-[preload  storage="./data/bgimage/イベント/434_1.png"  ]
-[return]
