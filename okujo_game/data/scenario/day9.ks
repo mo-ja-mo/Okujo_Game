@@ -2,6 +2,16 @@
 
 *day9_start
 
+[mask_off  time="1000"  effect="fadeOut"  ]
+[tb_start_tyrano_code]
+[if exp="TYRANO.kag.stat.current_bgm !== 'BGM/day.mp3'"]
+[_tb_end_tyrano_code]
+
+[playbgm  volume="50"  time="1000"  loop="true"  storage="BGM/day.mp3"  ]
+[tb_start_tyrano_code]
+[endif]
+[_tb_end_tyrano_code]
+
 [cm  ]
 [tb_eval  exp="f.likability+=0"  name="likability"  cmd="+="  op="t"  val="0"  ]
 [bg  storage="room.jpg"  time="1000"  ]
@@ -18,10 +28,10 @@
 [tb_ptext_hide  time="1000"  ]
 [tb_hide_message_window  ]
 [bg  time="1000"  method="fadeIn"  storage="okujyo_cloudy.png"  ]
-[chara_show  name="mizuki"  time="1000"  wait="true"  storage="chara/1/mzk_normal.png"  width="365"  height="865"  left="320"  top="70"  reflect="false"  ]
+[chara_show  name="mizuki"  time="1000"  wait="true"  storage="chara/1/mzk_akire.png"  width="365"  height="865"  left="320"  top="70"  reflect="false"  ]
 [tb_show_message_window  ]
 [tb_start_text mode=1 ]
-瑞希くんは先に来ていたようだ。[p]
+瑞希くんは先に来ていた。[p]
 #類
 （……おや？）[p]
 #
@@ -41,16 +51,37 @@
 [jump  storage="day9.ks"  target="*様子を見る_好感度高"  cond="f.likability>9"  ]
 [tb_start_text mode=1 ]
 瑞希くんは浮かない顔で膝を抱えている。[p]
+強張った表情でこちらに背を向けている様子は、明らかに僕の干渉を拒んでいるように見えた。[p]
+#類
+（話しかけるなということなんだろうな……）[p]
+#
+
+[_tb_end_text]
+
+[chara_mod  name="mizuki"  time="600"  cross="true"  storage="chara/1/mzk_normal_aozame.png"  ]
+[tb_start_text mode=1 ]
+#類
+（瑞希くんはひとりになりたいのかもしれないけれど、あんな様子でここに残していくのは心配だ）[p]
+#
 [_tb_end_text]
 
 [jump  storage="day9.ks"  target="*day_end"  ]
 *様子を見る_好感度高
 
 [tb_start_text mode=1 ]
+僕はなるべく瑞希くんのことを気にしていないふりをして、それとなく様子を見守りつつ、ロボットの改造に取りかかった。[p]
+#類
+（……作業が手につかないな）[p]
+#
+[_tb_end_text]
+
+[chara_mod  name="rui"  time="600"  cross="true"  storage="chara/2/rui_aseri.png"  ]
+[tb_start_text mode=1 ]
+瑞希くんは午前中はずっと自分の考えに沈んでいるようだったけれど、午後になったらいつの間にか僕の近くに座っていた。[p]
 #瑞希
 「……先輩は……」[p]
 #
-瑞希くんは何かを言いかけたが、黙ってしまった。[p]
+瑞希くんは思いつめた顔で何かを言いかけたけれど、また黙ってしまった。[p]
 [_tb_end_text]
 
 [jump  storage="day9.ks"  target="*day_end"  ]
@@ -58,16 +89,16 @@
 
 [chara_move  name="mizuki"  anim="false"  time="300"  effect="linear"  wait="true"  left="510"  top="70"  width="365"  height="865"  ]
 [chara_show  name="rui"  time="1000"  wait="true"  storage="chara/2/rui_normal.png"  width="400"  height="950"  left="150"  top="0"  reflect="false"  ]
-[tb_eval  exp="f.likability+=1"  name="likability"  cmd="+="  op="t"  val="1"  ]
+[tb_eval  exp="f.likability+=0"  name="likability"  cmd="+="  op="t"  val="0"  val_2="undefined"  ]
 [tb_show_message_window  ]
 [tb_start_text mode=1 ]
 僕はなるべくいつも通りを意識しながら、他愛のない雑談をした。[p]
-#
+
 [_tb_end_text]
 
 [jump  storage="day9.ks"  target="*雑談_好感度高"  cond="f.likability>9"  ]
 [tb_start_text mode=1 ]
-瑞希くんは無言だったが、立ち去ろうとはしなかった。[p]
+瑞希くんは煩わしそうな顔をして、僕からは死角になる塔屋の裏側に移動してしまった。[p]
 [_tb_end_text]
 
 [jump  storage="day9.ks"  target="*day_end"  ]
@@ -75,14 +106,14 @@
 *雑談_好感度高
 
 [tb_start_text mode=1 ]
-瑞希くんは小さく頷きながら、僕の話を聞いてくれた。[p]
+瑞希くんは上の空のようだったが、午前中いっぱい僕の近くで膝を抱えていた。[p]
 [_tb_end_text]
 
 [jump  storage="day9.ks"  target="*day_end"  ]
 [s  ]
 *サプライズをする
 
-[tb_eval  exp="f.likability+=2"  name="likability"  cmd="+="  op="t"  val="2"  val_2="undefined"  ]
+[tb_eval  exp="f.likability+=1"  name="likability"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
 [chara_hide  name="mizuki"  time="1000"  wait="true"  pos_mode="true"  ]
 [chara_show  name="rui"  time="1000"  wait="true"  storage="chara/2/rui_normal.png"  width="400"  height="950"  left="280"  top="0"  reflect="false"  ]
 [tb_show_message_window  ]
@@ -109,7 +140,7 @@
 
 [tb_start_text mode=1 ]
 #瑞希
-「ありがとう」[p]
+「……ありがとう」[p]
 #
 瑞希くんは小さくそう答えて、チョコレートを受けとってくれた。[p]
 [_tb_end_text]
@@ -118,9 +149,9 @@
 [s  ]
 *作業をする
 
-[tb_eval  exp="f.likability+=2"  name="likability"  cmd="+="  op="t"  val="2"  val_2="undefined"  ]
+[tb_eval  exp="f.likability+=1"  name="likability"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
 [chara_hide  name="mizuki"  time="1000"  wait="true"  pos_mode="true"  ]
-[chara_show  name="rui"  time="1000"  wait="true"  storage="chara/2/rui_normal.png"  width="400"  height="950"  ]
+[chara_show  name="rui"  time="1000"  wait="true"  storage="chara/2/rui_normal.png"  width="400"  height="950"  left="280"  top="0"  ]
 [tb_show_message_window  ]
 [tb_start_text mode=1 ]
 僕は小型ロボットの製作を進めることにした。[p]
@@ -144,14 +175,13 @@
 [s  ]
 *day_end
 
+[mask  time="1000"  effect="fadeIn"  color="0x000000"  ]
 [tb_hide_message_window  ]
 [tb_ptext_hide  time="1000"  ]
-[iscript]
-alert("day9終了です");
-alert("今の好感度は"+f.likability+"です");
-[endscript]
+[tb_start_tyrano_code]
+[freeimage layer="base"]
+[_tb_end_tyrano_code]
 
 [chara_hide_all  time="1000"  wait="true"  ]
-[tb_image_hide  time="1000"  ]
 [jump  storage="day10.ks"  target="*day10_start"  ]
 [s  ]

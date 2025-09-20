@@ -2,6 +2,16 @@
 
 *day12_start
 
+[mask_off  time="1000"  effect="fadeOut"  ]
+[tb_start_tyrano_code]
+[if exp="TYRANO.kag.stat.current_bgm !== 'BGM/day.mp3'"]
+[_tb_end_tyrano_code]
+
+[playbgm  volume="50"  time="1000"  loop="true"  storage="BGM/day.mp3"  ]
+[tb_start_tyrano_code]
+[endif]
+[_tb_end_tyrano_code]
+
 [cm  ]
 [tb_eval  exp="f.likability+=0"  name="likability"  cmd="+="  op="t"  val="0"  ]
 [bg  storage="room.jpg"  time="1000"  ]
@@ -40,11 +50,18 @@
 「いや……テスト勉強は？」[p]
 #類
 「テスト？……ああ、そういえば来週だったね」[p]
+＃[p]
+
+[_tb_end_text]
+
+[chara_mod  name="mizuki"  time="600"  cross="true"  storage="chara/1/mzk_komari.png"  ]
+[tb_start_text mode=1 ]
 #瑞希
 「忘れてたわけ？」[p]
 #類
 「フフ、隣で勉強させてもらうよ」[p]
 （テスト範囲の確認と……何をしようかな）[p]
+＃[p]
 参考までに瑞希くんは……理科の問題集を開いているみたいだ。[p]
 [_tb_end_text]
 
@@ -54,7 +71,10 @@
 [s  ]
 *丸付け
 
+[chara_hide_all  time="1000"  wait="true"  ]
+[playbgm  volume="50"  time="1000"  loop="true"  storage="BGM/honobono_1.mp3"  ]
 [tb_eval  exp="f.likability+=1"  name="likability"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
+[bg  time="2000"  method="fadeIn"  storage="イベント/event_test.png"  ]
 [tb_show_message_window  ]
 [tb_start_text mode=1 ]
 #瑞希
@@ -88,7 +108,10 @@
 [jump  storage="day12_eve_test.ks"  target="*day_end"  ]
 *単元
 
+[chara_hide_all  time="1000"  wait="true"  ]
 [tb_eval  exp="f.likability+=1"  name="likability"  cmd="+="  op="t"  val="1"  ]
+[bg  time="2000"  method="fadeIn"  storage="イベント/event_test.png"  ]
+[playbgm  volume="50"  time="1000"  loop="true"  storage="BGM/honobono_1.mp3"  ]
 [tb_show_message_window  ]
 [tb_start_text mode=1 ]
 #瑞希
@@ -132,29 +155,17 @@
 [stopse  time="1000"  buf="0"  ]
 [tb_hide_message_window  ]
 [chara_hide_all  time="1000"  wait="true"  ]
-[bg  time="2000"  method="fadeIn"  storage="イベント/434_1.png"  ]
-[tb_show_message_window  ]
-[tb_start_text mode=1 ]
-#類
-「助かったよ。ありがとう」[p]
-#瑞希
-「別に。ボク カレー好きだし」[p]
-#
-[_tb_end_text]
-
-[tb_hide_message_window  ]
 [jump  storage="day12_eve_test.ks"  target="*day_end"  ]
 [s  ]
 *day_end
 
+[mask  time="1000"  effect="fadeIn"  color="0x000000"  ]
 [tb_hide_message_window  ]
 [tb_ptext_hide  time="1000"  ]
-[iscript]
-alert("day12終了です");
-alert("今の好感度は"+f.likability+"です");
-[endscript]
+[tb_start_tyrano_code]
+[freeimage layer="base"]
+[_tb_end_tyrano_code]
 
 [chara_hide_all  time="1000"  wait="true"  ]
-[tb_image_hide  time="1000"  ]
 [jump  storage="day14.ks"  target="*day14_start"  ]
 [s  ]

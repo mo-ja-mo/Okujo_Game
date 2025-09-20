@@ -3,6 +3,8 @@
 *day1_start
 
 [tb_ptext_hide  time="1000"  ]
+[mask_off  time="1000"  effect="fadeOut"  ]
+[playbgm  volume="50"  time="1000"  loop="true"  storage="BGM/day.mp3"  ]
 [cm  ]
 [bg  storage="room.jpg"  time="1000"  ]
 [tb_ptext_show  x="386.9999694824219"  y="218.00001525878906"  size="50"  color="0xded3d7"  time="2000"  text="Day&nbsp;1"  anim="false"  face="cursive"  edge="undefined"  shadow="0x140e0e"  ]
@@ -38,6 +40,9 @@
 [tb_show_message_window  ]
 [chara_show  name="mizuki"  time="1000"  wait="true"  storage="chara/1/mzk_normal.png"  width="365"  height="865"  left="320"  top="70"  reflect="false"  ]
 [tb_start_text mode=1 ]
+#瑞希
+「…………」[p]
+#
 瑞希くんは先に来ていたようだ。[p]
 僕は瑞希くんから少し距離を取って座った。[p]
 [_tb_end_text]
@@ -54,14 +59,17 @@
 [tb_show_message_window  ]
 [jump  storage="day1.ks"  target="*様子を見る_好感度高"  cond="f.likability>5"  ]
 [tb_start_text mode=1 ]
-瑞希くんはぼーっと空を見ている[p]
+瑞希くんはぼーっと空を見ている。[p]
+#類
+（話しかけたら、行ってしまいそうだ……）[p]
+#
 [_tb_end_text]
 
 [jump  storage="day1.ks"  target="*day_end"  ]
 *様子を見る_好感度高
 
 [tb_start_text mode=1 ]
-様子を見る＿好感度高[p]
+様子を見る＿好感度高（1,2日目は設定なし）[p]
 [_tb_end_text]
 
 [jump  storage="day1.ks"  target="*day_end"  ]
@@ -73,11 +81,17 @@
 [tb_show_message_window  ]
 [tb_start_text mode=1 ]
 僕は昨日見たばかりのショーの話をした。[p]
+#類
+（しまった。瑞希くんはショーには興味がないかもしれないのに……）[p]
+#
 [_tb_end_text]
 
 [jump  storage="day1.ks"  target="*雑談_好感度高"  cond="f.likability>5"  ]
 [tb_start_text mode=1 ]
 瑞希くんは小さく頷いてくれた。[p]
+#類
+（迷惑そうな顔をされるかと思ったけれど……少なくとも嫌がられているとは思わなくていいのかな）[p]
+#
 [_tb_end_text]
 
 [jump  storage="day1.ks"  target="*day_end"  ]
@@ -85,7 +99,7 @@
 *雑談_好感度高
 
 [tb_start_text mode=1 ]
-雑談　好感度高[p]
+雑談　好感度高（1,2日目は設定なし）[p]
 [_tb_end_text]
 
 [jump  storage="day1.ks"  target="*day_end"  ]
@@ -103,26 +117,29 @@
 #
 [_tb_end_text]
 
-[jump  storage="day2.ks"  target="*サプライズ_好感度高"  cond="f.likability>5"  ]
+[jump  storage="day1.ks"  target="*サプライズ_好感度高"  cond="f.likability>5"  ]
 [tb_start_text mode=1 ]
-瑞希くんは小さく首を振った。[p]
+瑞希くんはちらりと僕を見上げてから、小さく首を振った。[p]
+#類
+（まだ警戒されているみたいだ）[p]
+#
 [_tb_end_text]
 
-[jump  storage="day2.ks"  target="*day_end"  ]
+[jump  storage="day1.ks"  target="*day_end"  ]
 [s  ]
 *サプライズ_好感度高
 
 [tb_start_text mode=1 ]
-サプライズ_好感度高[p]
+サプライズ_好感度高（1,2日目は設定なし）[p]
 [_tb_end_text]
 
-[jump  storage="day2.ks"  target="*day_end"  ]
+[jump  storage="day1.ks"  target="*day_end"  ]
 [s  ]
 *作業をする
 
 [tb_eval  exp="f.likability+=1"  name="likability"  cmd="+="  op="t"  val="1"  ]
 [chara_hide  name="mizuki"  time="1000"  wait="true"  pos_mode="true"  ]
-[chara_show  name="rui"  time="1000"  wait="true"  storage="chara/2/rui_normal.png"  width="400"  height="950"  ]
+[chara_show  name="rui"  time="1000"  wait="true"  storage="chara/2/rui_normal.png"  width="400"  height="950"  left="280"  top="0"  ]
 [tb_show_message_window  ]
 [tb_start_text mode=1 ]
 僕は持ってきた装置の製作を進めることにした。[p]
@@ -138,19 +155,19 @@
 *作業をする_好感度高
 
 [tb_start_text mode=1 ]
-作業をする　好感度高[p]
+作業をする　好感度高（1,2日目は設定なし）[p]
 [_tb_end_text]
 
 [jump  storage="day1.ks"  target="*day_end"  ]
 [s  ]
 *day_end
 
+[mask  time="1000"  effect="fadeIn"  color="0x000000"  ]
 [tb_hide_message_window  ]
 [tb_ptext_hide  time="1000"  ]
-[iscript]
-alert("day1終了です");
-alert("今の好感度は"+f.likability+"です");
-[endscript]
+[tb_start_tyrano_code]
+[freeimage layer="base"]
+[_tb_end_tyrano_code]
 
 [chara_hide_all  time="1000"  wait="true"  ]
 [jump  storage="day2.ks"  target="*day2_start"  ]

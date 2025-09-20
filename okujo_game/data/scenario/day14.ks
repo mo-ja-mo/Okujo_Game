@@ -2,6 +2,16 @@
 
 *day14_start
 
+[mask_off  time="1000"  effect="fadeOut"  ]
+[tb_start_tyrano_code]
+[if exp="TYRANO.kag.stat.current_bgm !== 'BGM/day.mp3'"]
+[_tb_end_tyrano_code]
+
+[playbgm  volume="50"  time="1000"  loop="true"  storage="BGM/day.mp3"  ]
+[tb_start_tyrano_code]
+[endif]
+[_tb_end_tyrano_code]
+
 [cm  ]
 [tb_eval  exp="f.likability+=0"  name="likability"  cmd="+="  op="t"  val="0"  ]
 [bg  storage="room.jpg"  time="1000"  ]
@@ -25,6 +35,9 @@
 瑞希くんは一限が終わった頃に来た。[p]
 [_tb_end_text]
 
+[playse  volume="100"  time="1000"  buf="1"  storage="climbing-the-stairs-cut.mp3"  clear="true"  ]
+[wait  time="2000"  ]
+[playse  volume="50"  time="1000"  buf="0"  storage="鉄の扉を開ける.mp3"  ]
 [chara_show  name="mizuki"  time="1000"  wait="true"  storage="chara/1/mzk_normal.png"  width="365"  height="865"  left="320"  top="70"  reflect="false"  ]
 [tb_start_text mode=1 ]
 #瑞希
@@ -57,6 +70,7 @@
 「何時まで起きていたんだい？」[p]
 #瑞希
 「3時半まで見て、その後についネットで感想漁っちゃってさ」[p]
+#
 言いながらさらに瑞希くんは欠伸をした。[p]
 [_tb_end_text]
 
@@ -104,7 +118,7 @@
 「どのあたりがひとりっ子に見えたんだい？」[p]
 #瑞希
 「まぁ、なんとなく？」[p]
-
+#
 なんだか釈然としなかったが、瑞希くんはそれ以上答えてくれなかった。[p]
 [_tb_end_text]
 
@@ -123,7 +137,15 @@
 「え、納得いかない感じ？」[p]
 #類
 「そういうわけではないよ」[p]
+#
+
+[_tb_end_text]
+
+[chara_mod  name="rui"  time="600"  cross="true"  storage="chara/2/rui_mesorashi.png"  ]
+[tb_start_text mode=1 ]
+#類
 （ここではなるべく瑞希くんを気に掛けていたつもりだったけれど……瑞希くんからはマイペースに見えていたということか）[p]
+#
 [_tb_end_text]
 
 [jump  storage="day14.ks"  target="*day_end"  ]
@@ -140,7 +162,7 @@
 [_tb_end_text]
 
 [chara_move  name="rui"  anim="false"  time="300"  effect="linear"  wait="true"  left="150"  top="0"  width="400"  height="950"  ]
-[chara_show  name="mizuki"  time="1000"  wait="true"  storage="chara/1/mzk_normal.png" width="365"  height="865"  left="510"  top="70"  reflect="false"  ]
+[chara_show  name="mizuki"  time="1000"  wait="true"  storage="chara/1/mzk_normal.png"  width="365"  height="865"  left="510"  top="70"  reflect="false"  ]
 [tb_start_text mode=1 ]
 #瑞希
 「先輩、その風船どうしたの？」[p]
@@ -169,10 +191,11 @@
 瑞希くんは驚いたように目を見開く。[p]
 #類
 「フフフ。サプライズだよ。きれいだろう？」[p]
-
+#
 [_tb_end_text]
 
 [free_layermode  time="1000"  wait="true"  ]
+[chara_mod  name="mizuki"  time="600"  cross="true"  storage="chara/1/mzk_komari.png"  ]
 [tb_start_text mode=1 ]
 #瑞希
 「確かにきれいだけど……先輩、これどうするの？」[p]
@@ -205,13 +228,12 @@
 
 [tb_eval  exp="f.likability+=1"  name="likability"  cmd="+="  op="t"  val="1"  ]
 [chara_hide  name="mizuki"  time="1000"  wait="true"  pos_mode="true"  ]
-[chara_show  name="rui"  time="1000"  wait="true"  storage="chara/2/rui_normal.png"  width="400"  height="950"  ]
+[chara_show  name="rui"  time="1000"  wait="true"  storage="chara/2/rui_normal.png"  width="400"  height="950"  left="280"  top="0"  ]
 [tb_show_message_window  ]
 [tb_start_text mode=1 ]
 僕はショー用の小型ロボットの製作を進めることにした。もう仕上げの段階だ。[p]
 [_tb_end_text]
 
-[chara_mod  name="rui"  time="600"  cross="true"  storage="chara/2/rui_takurami.png"  ]
 [chara_move  name="rui"  anim="false"  time="300"  effect="linear"  wait="true"  left="150"  top="0"  width="400"  height="950"  ]
 [chara_show  name="mizuki"  time="1000"  wait="true"  storage="chara/1/mzk_normal.png"  width="365"  height="865"  left="510"  top="70"  reflect="false"  ]
 [jump  storage="day14.ks"  target="*作業をする_好感度高"  cond="f.likability>17"  ]
@@ -220,10 +242,21 @@
 「先輩、そのロボットの首のリボン、なんか歪んでない？」[p]
 #類
 「おや、気づかなかったな」[p]
+#
+
+[_tb_end_text]
+
+[chara_mod  name="rui"  time="600"  cross="true"  storage="chara/2/rui_aseri.png"  ]
+[tb_start_text mode=1 ]
 #瑞希
 「ボク、結び直していい？」[p]
 #類
 「そうして貰えると助かるよ。どうもこういったことは苦手でね」[p]
+#
+[_tb_end_text]
+
+[chara_mod  name="rui"  time="600"  cross="true"  storage="chara/2/rui_smile.png"  ]
+[tb_start_text mode=1 ]
 #瑞希
 「そういえば先輩って、機械とかいじってる時は器用そうなのに、ネクタイはいつもナナメだよね」[p]
 #類
@@ -233,6 +266,8 @@
 #
 [_tb_end_text]
 
+[jump  storage="day14.ks"  target="*day_end"  ]
+[chara_mod  name="mizuki"  time="600"  cross="true"  storage="chara/1/mzk_akire.png"  ]
 [jump  storage="day14.ks"  target="*day_end"  ]
 *作業をする_好感度高
 
@@ -245,18 +280,43 @@
 「衣装とかは着せないんだ？」[p]
 #類
 「衣装って、ロボットにかい？」[p]
+#
+
+[_tb_end_text]
+
+[chara_mod  name="rui"  time="600"  cross="true"  storage="chara/2/rui_mouthopen.png"  ]
+[tb_start_text mode=1 ]
 #瑞希
 「うん。だって、そのロボットも観客の前に立つんでしょ？」[p]
 #類
-「……確かにそうだね。そうな風に考えたことはなかったな」[p]
+「……確かにそうだね。そんな風に考えたことはなかったな」[p]
+#
+
+[_tb_end_text]
+
+[chara_mod  name="rui"  time="600"  cross="true"  storage="chara/2/rui_normal.png"  ]
+[tb_start_text mode=1 ]
 #瑞希
 「ねぇ、このロボットの衣装、ボクが用意してもいい？ 簡単なものになっちゃうけど」[p]
 #類
 「瑞希くんが？」[p]
 #瑞希
 「うん。えっと、子ども服とかアレンジしたら簡単にできそうだし」[p]
+#
+
+[_tb_end_text]
+
+[chara_mod  name="mizuki"  time="600"  cross="true"  storage="chara/1/mzk_mesorashi_sekimen.png"  ]
+[tb_start_text mode=1 ]
 #類
 「僕はうれしいけれど……いいのかい？」[p]
+#
+
+[_tb_end_text]
+
+[chara_mod  name="rui"  time="600"  cross="true"  storage="chara/2/rui_mouthopen.png"  ]
+[chara_mod  name="mizuki"  time="600"  cross="true"  storage="chara/1/mzk_smile.png"  ]
+[tb_start_text mode=1 ]
 #瑞希
 「いいよ。まぁどうせ暇だしね」[p]
 #
@@ -268,14 +328,13 @@
 [s  ]
 *day_end
 
+[mask  time="1000"  effect="fadeIn"  color="0x000000"  ]
 [tb_hide_message_window  ]
 [tb_ptext_hide  time="1000"  ]
-[iscript]
-alert("day14終了です");
-alert("今の好感度は"+f.likability+"です");
-[endscript]
+[tb_start_tyrano_code]
+[freeimage layer="base"]
+[_tb_end_tyrano_code]
 
 [chara_hide_all  time="1000"  wait="true"  ]
-[tb_image_hide  time="1000"  ]
 [jump  storage="day15.ks"  target="*day15_start"  ]
 [s  ]

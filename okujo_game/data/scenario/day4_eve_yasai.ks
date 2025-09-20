@@ -2,6 +2,16 @@
 
 *day4_start
 
+[mask_off  time="1000"  effect="fadeOut"  ]
+[tb_start_tyrano_code]
+[if exp="TYRANO.kag.stat.current_bgm !== 'BGM/day.mp3'"]
+[_tb_end_tyrano_code]
+
+[playbgm  volume="50"  time="1000"  loop="true"  storage="BGM/day.mp3"  fadein="false"  ]
+[tb_start_tyrano_code]
+[endif]
+[_tb_end_tyrano_code]
+
 [cm  ]
 [tb_eval  exp="f.likability+=0"  name="likability"  cmd="+="  op="t"  val="0"  ]
 [bg  storage="room.jpg"  time="1000"  ]
@@ -12,8 +22,8 @@
 今日は午前中に小テストや実習があり、なかなか屋上に行けなかった。[p]
 #類
 （瑞希くんはもう屋上にいるだろうか）[p]
-（そういえば瑞希くんは、屋上に昼ごはんを持ってきているようだった。）[p]
-（僕も持って行けば、一緒に食べられるだろうか？）[p]
+（そういえば瑞希くんは、屋上に昼ごはんを持ってきているようだった）[p]
+（僕も持って行けば、一緒に食べられるかな？）[p]
 #
 [_tb_end_text]
 
@@ -36,9 +46,10 @@
 「……別にボクの専用の場所ってわけじゃないし」[p]
 #
 #
-了承と取って、僕は瑞希くんの隣に腰を下ろした。[p]
+了承と受け取って、僕は瑞希くんの隣に腰を下ろした。[p]
 [_tb_end_text]
 
+[playbgm  volume="70"  time="1000"  loop="true"  storage="BGM/honobono_1.mp3"  fadein="false"  ]
 [tb_hide_message_window  ]
 [glink  color="btn_02_black"  storage="day4_eve_yasai.ks"  size="20"  text="照り焼きチキンサンドを取り出す"  target="*照り焼き"  x="250"  y="250"  width="200"  height=""  _clickable_img=""  autopos="true"  ]
 [glink  color="btn_02_black"  storage="day4_eve_yasai.ks"  size="20"  target="*カレーパン"  text="カレーパンを取り出す"  autopos="true"  x="550"  y="250"  width="200"  height=""  _clickable_img=""  ]
@@ -70,12 +81,18 @@
 視線を感じて横を見ると、瑞希くんがじっと僕を見ていた。[p]
 #瑞希
 「先輩って･･････もしかしてレタス嫌いなの？」[p]
-#類
-「ああ、嫌いだね。なぜサンドイッチにあんな青臭い葉を入れるのか理解できないよ。いいかい、瑞希くん。人間は草食動物じゃない。野菜なんて食べなくても生きていけるんだ」[p]
 #
 [_tb_end_text]
 
-[chara_mod  name="mizuki"  time="600"  cross="true"  storage="chara/1/mzk_mouthopen.png"  ]
+[chara_mod  name="rui"  time="600"  cross="true"  storage="chara/2/base.png"  ]
+[tb_start_text mode=1 ]
+#類
+「ああ、嫌いだね。なぜサンドイッチにあんな青臭い葉を入れるのか理解できないよ。[p]
+いいかい、瑞希くん。人間は草食動物じゃない。野菜なんて食べなくても生きていけるんだ」[p]
+#
+[_tb_end_text]
+
+[chara_mod  name="mizuki"  time="600"  cross="true"  storage="chara/1/mzk_komari.png"  ]
 [tb_start_text mode=1 ]
 #瑞希
 「･･････先輩って、本当に野菜が嫌いなんだね」[p]
@@ -123,7 +140,7 @@
 [_tb_end_text]
 
 [chara_move  name="rui"  anim="false"  time="300"  effect="linear"  wait="true"  left="150"  top="0"  width="400"  height="950"  ]
-[chara_show  name="mizuki"  time="1000"  wait="true"  storage="chara/1/mzk_normal.png"  width="365"  height="865"  left="510"  top="70"  reflect="false"  ]
+[chara_show  name="mizuki"  time="1000"  wait="true"  storage="chara/1/mzk_odoroki.png"  width="365"  height="865"  left="510"  top="70"  reflect="false"  ]
 [tb_start_text mode=1 ]
 #瑞希
 「？」[p]
@@ -148,7 +165,7 @@
 [_tb_end_text]
 
 [chara_move  name="rui"  anim="false"  time="300"  effect="linear"  wait="true"  left="150"  top="0"  width="400"  height="950"  ]
-[chara_show  name="mizuki"  time="1000"  wait="true"  storage="chara/1/mzk_mouthopen.png"  width="365"  height="865"  left="510"  top="70"  reflect="false"  ]
+[chara_show  name="mizuki"  time="1000"  wait="true"  storage="chara/1/mzk_akire.png"  width="365"  height="865"  left="510"  top="70"  reflect="false"  ]
 [tb_start_text mode=1 ]
 #瑞希
 「先輩、それ食べないの？ 好きじゃないとか？」[p]
@@ -219,14 +236,14 @@
 [s  ]
 *day_end
 
+[mask  time="1000"  effect="fadeIn"  color="0x000000"  ]
 [tb_hide_message_window  ]
 [tb_ptext_hide  time="1000"  ]
-[iscript]
-alert("day4終了です");
-alert("今の好感度は"+f.likability+"です");
-[endscript]
+[tb_start_tyrano_code]
+[freeimage layer="base"]
+[_tb_end_tyrano_code]
 
 [chara_hide_all  time="1000"  wait="true"  ]
-[tb_image_hide  time="1000"  ]
+
 [jump  storage="day5.ks"  target="*day5_start"  ]
 [s  ]

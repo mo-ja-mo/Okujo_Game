@@ -2,6 +2,16 @@
 
 *day17_start
 
+[mask_off  time="1000"  effect="fadeOut"  ]
+[tb_start_tyrano_code]
+[if exp="TYRANO.kag.stat.current_bgm !== 'BGM/day.mp3'"]
+[_tb_end_tyrano_code]
+
+[playbgm  volume="50"  time="1000"  loop="true"  storage="BGM/day.mp3"  ]
+[tb_start_tyrano_code]
+[endif]
+[_tb_end_tyrano_code]
+
 [cm  ]
 [bg  storage="room.jpg"  time="1000"  ]
 [tb_ptext_show  x="386.9999694824219"  y="218.00001525878906"  size="50"  color="0xded3d7"  time="2000"  text="Day&nbsp;17"  anim="false"  face="cursive"  edge="undefined"  shadow="0x140e0e"  ]
@@ -42,7 +52,7 @@
 #
 [_tb_end_text]
 
-[chara_mod  name="mizuki"  time="600"  cross="true"  storage="chara/1/mzk_smile.png"  ]
+[chara_mod  name="mizuki"  time="600"  cross="true"  storage="chara/1/mzk_mouthopen.png"  ]
 [tb_start_text mode=1 ]
 #類
 （瑞希くんとは最近は毎日のように屋上で一緒に過ごしていたけれど、今日から新学期まではしばらく会えない。今日伝えておかないと）[p]
@@ -50,8 +60,8 @@
 
 [jump  storage="day17_syugyousiki.ks"  target="*Normal_End分岐"  cond="f.likability>20"  ]
 [tb_hide_message_window  ]
-[glink  color="btn_02_black"  storage="day17_syugyousiki.ks"  size="20"  text="初詣に誘う"  target="*初詣に誘う"  x="250"  y="200"  width="200"  height=""  _clickable_img=""  ]
-[glink  color="btn_02_black"  storage="day17_syugyousiki.ks"  size="20"  target="*NormalEnd"  text="感謝を伝える"  autopos="false"  x="550"  y="200"  width="200"  height=""  _clickable_img=""  ]
+[glink  color="btn_02_black"  storage="day17_syugyousiki.ks"  size="20"  text="初詣に誘う"  target="*初詣に誘う"  x="250"  y="450"  width="200"  height=""  _clickable_img=""  ]
+[glink  color="btn_02_black"  storage="day17_syugyousiki.ks"  size="20"  target="*NormalEnd"  text="感謝を伝える"  autopos="false"  x="550"  y="450"  width="200"  height=""  _clickable_img=""  ]
 [s  ]
 *Normal_End分岐
 
@@ -68,7 +78,7 @@
 
 [_tb_end_text]
 
-[chara_mod  name="mizuki"  time="600"  cross="true"  storage="chara/1/mzk_mouthopen.png"  ]
+[chara_mod  name="mizuki"  time="600"  cross="true"  storage="chara/1/mzk_odoroki.png"  ]
 [tb_start_text mode=1 ]
 #瑞希
 「……え？」[p]
@@ -87,6 +97,7 @@
 #
 [_tb_end_text]
 
+[chara_mod  name="mizuki"  time="600"  cross="true"  storage="chara/1/mzk_komari.png"  ]
 [chara_mod  name="rui"  time="600"  cross="true"  storage="chara/2/rui_aseri.png"  ]
 [tb_start_text mode=1 ]
 #類
@@ -103,7 +114,7 @@
 #
 [_tb_end_text]
 
-[chara_mod  name="rui"  time="600"  cross="true"  storage="chara/2/rui_smile.png"  ]
+[chara_mod  name="rui"  time="600"  cross="true"  storage="chara/2/rui_mouthopen.png"  ]
 [tb_start_text mode=1 ]
 #類
 「本当かい！？」[p]
@@ -121,15 +132,22 @@
 ぼそぼそと言った瑞希くんの声は、最後の方がよく聞き取れなかった。[p]
 [_tb_end_text]
 
-[chara_mod  name="mizuki"  time="600"  cross="true"  storage="chara/1/mzk_normal.png"  ]
+[chara_mod  name="mizuki"  time="600"  cross="true"  storage="chara/1/mzk_mesorashi_sekimen.png"  ]
 [tb_start_text mode=1 ]
 #類
 （楽しそうって……言ってくれたのかな……？）[p]
 （何にも興味がないみたいな冷めた顔で屋上にいる瑞希くんを、少しでも笑顔にできたらと思っていた）[p]
 （力不足を痛感することばかりだったけれど、少しは僕と一緒にいて楽しいと思って貰えていたんだろうか）[p]
 （そうだったらいいな。僕は瑞希くんと過ごせて楽しかったから）[p]
-「じゃあ瑞希くん、日程を決めようか？ その前に念のために連絡先を交換しないかい？」[p]
+#
 
+[_tb_end_text]
+
+[chara_mod  name="rui"  time="600"  cross="true"  storage="chara/2/rui_nikkori.png"  ]
+[tb_start_text mode=1 ]
+#類
+「じゃあ瑞希くん、日程を決めようか？ その前に念のために連絡先を交換しないかい？」[p]
+#
 [_tb_end_text]
 
 [chara_mod  name="mizuki"  time="600"  cross="true"  storage="chara/1/mzk_smile.png"  ]
@@ -139,19 +157,19 @@
 #
 [_tb_end_text]
 
+[mask  time="1000"  effect="fadeIn"  color="0x000000"  ]
 [tb_hide_message_window  ]
 [tb_ptext_hide  time="1000"  ]
-[iscript]
-alert("day17終了です");
-alert("今の好感度は"+f.likability+"です");
-[endscript]
+[tb_start_tyrano_code]
+[freeimage layer="base"]
+[_tb_end_tyrano_code]
 
 [chara_hide_all  time="1000"  wait="true"  ]
-[tb_image_hide  time="1000"  ]
 [jump  storage="day18_eve_newyear.ks"  target="*day18_start"  ]
 [s  ]
 *NormalEnd
 
+[playbgm  volume="15"  time="1000"  loop="true"  storage="BGM/ending.mp3"  ]
 [tb_show_message_window  ]
 [tb_start_text mode=1 ]
 #類
@@ -174,14 +192,14 @@ alert("今の好感度は"+f.likability+"です");
 #
 [_tb_end_text]
 
-[chara_mod  name="rui"  time="600"  cross="true"  storage="chara/2/rui_smile.png"  ]
+[chara_mod  name="rui"  time="600"  cross="true"  storage="chara/2/rui_nikkori.png"  ]
 [tb_start_text mode=1 ]
 #類
 「瑞希くんと、一緒に過ごせてよかったよ」[p]
 #
 [_tb_end_text]
 
-[chara_mod  name="mizuki"  time="600"  cross="true"  storage="chara/1/mzk_mouthopen.png"  ]
+[chara_mod  name="mizuki"  time="600"  cross="true"  storage="chara/1/mzk_komari.png"  ]
 [tb_start_text mode=1 ]
 #瑞希
 「……これで最後みたいな言い方だけど、まさか三学期は学校に来ないとかじゃないよね？」[p]
@@ -191,6 +209,7 @@ alert("今の好感度は"+f.likability+"です");
 [_tb_end_text]
 
 [chara_mod  name="rui"  time="600"  cross="true"  storage="chara/2/rui_aseri.png"  ]
+[chara_mod  name="mizuki"  time="600"  cross="true"  storage="chara/1/mzk_akire.png"  ]
 [tb_start_text mode=1 ]
 #瑞希
 「……もう来ないのかと思ったじゃん」[p]
@@ -203,32 +222,51 @@ alert("今の好感度は"+f.likability+"です");
 「フフフ、三学期ももちろん来るつもりだよ。寒そうだから冬休みの間に少しでも快適に過ごせるようにいろいろ準備しようかと思っているんだ」[p]
 #瑞希
 「……先輩がその顔すると、ちょっと不安だなぁ」[p]
-＃[p]
+#
 [_tb_end_text]
 
+[chara_mod  name="mizuki"  time="600"  cross="true"  storage="chara/1/mzk_komari.png"  ]
 [chara_mod  name="rui"  time="600"  cross="true"  storage="chara/2/rui_smile.png"  ]
 [tb_start_text mode=1 ]
 #類
 「今年はいろいろありがとう。来年もよろしくね、瑞希くん」[p]
-#瑞希
-「……ボクも、先輩のおかげで退屈せずに過ごせたよ。ありがとう」[p]
 #
 [_tb_end_text]
 
 [chara_mod  name="mizuki"  time="600"  cross="true"  storage="chara/1/mzk_smile.png"  ]
 [tb_start_text mode=1 ]
 #瑞希
+「……ボクも、先輩のおかげで退屈せずに過ごせたよ。ありがとう」[p]
+#
+[_tb_end_text]
+
+[chara_mod  name="mizuki"  time="600"  cross="true"  storage="chara/1/mzk_bigsmile.png"  ]
+[tb_start_text mode=1 ]
+#瑞希
 「……よろしく」[p]
 #
 [_tb_end_text]
 
+[wait  time="3000"  ]
+[mask  time="1000"  effect="fadeIn"  color="0x000000"  ]
 [tb_hide_message_window  ]
 [tb_ptext_hide  time="1000"  ]
-[iscript]
-alert("day17終了です");
-alert("今の好感度は"+f.likability+"です");
-[endscript]
+[tb_start_tyrano_code]
+[freeimage layer="base"]
+[_tb_end_tyrano_code]
 
 [chara_hide_all  time="1000"  wait="true"  ]
-[tb_image_hide  time="1000"  ]
+[mask_off  time="1000"  effect="fadeOut"  ]
+[playbgm  volume="20"  time="1000"  loop="true"  storage="BGM/hoshinomatataki.mp3"  ]
+[tb_eval  exp="sf.skip_flag+=1"  name="skip_flag"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
+[bg  time="2000"  method="crossfade"  storage="credit.png"  ]
+[wait  time="3000"  ]
+[l  ]
+[bg  time="1000"  method="crossfade"  storage="bg_black.png"  ]
+[tb_ptext_show  x="305"  y="280.00001525878906"  size="30"  color="0xffffff"  time="3000"  text="友情ルート：Normal&nbsp;End"  face="sans-serif,'メイリオ'"  anim="false"  edge="undefined"  shadow="undefined"  ]
+[tb_ptext_show  x="350"  y="330"  size="30"  color="0xffffff"  time="3000"  text="「来年もよろしく」"  face="sans-serif,'メイリオ'"  anim="false"  edge="undefined"  shadow="undefined"  ]
+[wait  time="3000"  ]
+[l  ]
+[tb_ptext_hide  time="1000"  ]
+[jump  storage="title_screen.ks"  target=""  ]
 [s  ]

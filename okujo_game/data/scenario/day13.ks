@@ -2,6 +2,16 @@
 
 *day13_start
 
+[mask_off  time="1000"  effect="fadeOut"  ]
+[tb_start_tyrano_code]
+[if exp="TYRANO.kag.stat.current_bgm !== 'BGM/day.mp3'"]
+[_tb_end_tyrano_code]
+
+[playbgm  volume="50"  time="1000"  loop="true"  storage="BGM/day.mp3"  ]
+[tb_start_tyrano_code]
+[endif]
+[_tb_end_tyrano_code]
+
 [cm  ]
 [tb_eval  exp="f.likability+=5"  name="likability"  cmd="+="  op="t"  val="5"  val_2="undefined"  ]
 [bg  storage="room.jpg"  time="1000"  ]
@@ -85,6 +95,12 @@
 瑞希くんはお勧めの曲をいくつか教えてくれた。[p]
 [_tb_end_text]
 
+[tb_start_text mode=1 ]
+#類
+（学校の友人にお薦めのものを教えてもらったのは初めてだな……）[p]
+#
+[_tb_end_text]
+
 [jump  storage="day13.ks"  target="*day_end"  ]
 *雑談をする
 
@@ -103,8 +119,12 @@
 #
 [_tb_end_text]
 
+[chara_mod  name="mizuki"  time="600"  cross="true"  storage="chara/1/mzk_smile.png"  ]
 [jump  storage="day13.ks"  target="*雑談_好感度高"  cond="f.likability>15"  ]
 [tb_start_text mode=1 ]
+#瑞希
+「先輩らしいね」[p]
+#
 瑞希くんは小さく頷きながら、僕の演出プランを聞いてくれた。[p]
 [_tb_end_text]
 
@@ -136,6 +156,7 @@
 #
 [_tb_end_text]
 
+[chara_mod  name="rui"  time="600"  cross="true"  storage="chara/2/rui_wink.png"  ]
 [chara_move  name="rui"  anim="false"  time="300"  effect="linear"  wait="true"  left="150"  top="0"  width="400"  height="950"  ]
 [chara_show  name="mizuki"  time="1000"  wait="true"  storage="chara/1/mzk_smile.png"  width="365"  height="865"  left="510"  top="70"  reflect="false"  ]
 [tb_start_text mode=1 ]
@@ -169,7 +190,7 @@
 
 [tb_eval  exp="f.likability+=1"  name="likability"  cmd="+="  op="t"  val="1"  ]
 [chara_hide  name="mizuki"  time="1000"  wait="true"  pos_mode="true"  ]
-[chara_show  name="rui"  time="1000"  wait="true"  storage="chara/2/rui_takurami.png"  width="400"  height="950"  ]
+[chara_show  name="rui"  time="1000"  wait="true"  storage="chara/2/rui_takurami.png"  width="400"  height="950"  left="280"  top="0"  ]
 [tb_show_message_window  ]
 [tb_start_text mode=1 ]
 僕が次に作る装置の設計図を書いていると、瑞希くんが覗き込んで来た。[p]
@@ -187,6 +208,7 @@
 「へぇ、先輩の作るロボットとかそういう装置って、なんかポップでカワイイよね」[p]
 #類
 「そうかな？子どもも楽しめるようなショーを想定しているから…かもしれないね」[p]
+#
 [_tb_end_text]
 
 [jump  storage="day13.ks"  target="*day_end"  ]
@@ -201,21 +223,36 @@
 「へぇ、先輩の作るロボットとかそういう装置って、なんかポップでカワイイよね」[p]
 #類
 「そうかな？子どもも楽しめるようなショーを想定しているからかもしれないね」[p]
+#
+[_tb_end_text]
+
+[tb_start_text mode=1 ]
 #瑞希
 「先輩は……どういうショーが作りたいの？」[p]
 #類
 「どういうショー……か。[p]
-僕は境遇や属性の違う様々な人たちが、ショーを通して同じ感情を共有できるような、見た人が垣根を越えて繋がれるような、そんなショーを作りたいと思っているんだ。[p]
+僕は境遇や属性の違う様々な人たちが、ショーを通して同じ感情を共有できるような、見た人が垣根を越えて繋がれるような、[p]
+そんなショーを作りたいと思っているんだ。[p]
 今はまだ、その入り口にすらたどり着けてはいないのだけどね」[p]
 #瑞希
 「…………」[p]
 「――垣根を越えて繋がれるような……か。本当にそうなれたらいいね」[p]
 #
+[_tb_end_text]
+
+[chara_mod  name="mizuki"  time="600"  cross="true"  storage="chara/1/mzk_smile.png"  ]
+[tb_start_text mode=1 ]
 瑞希くんは静かな声で、そう呟いた。[p]
 #類
 「理想論だとは言わないのかい？」[p]
 #瑞希
-「観客が一つになれるショーって言われたら、そんなの出来っこないって思うけど…、見た人が同じ感情を共有できるようなすごい作品を作りたいってことなら、不可能じゃない気がするから」[p]
+「観客が一つになれるショーって言われたら、そんなの出来っこないって思うけど…、[p]
+見た人が同じ感情を共有できるようなすごい作品を作りたいってことなら、不可能じゃない気がするから」[p]
+#
+[_tb_end_text]
+
+[chara_mod  name="rui"  time="600"  cross="true"  storage="chara/2/rui_smile.png"  ]
+[tb_start_text mode=1 ]
 #類
 「そうか。瑞希くんは物語の力は信じているんだね」[p]
 #
@@ -226,14 +263,13 @@
 [s  ]
 *day_end
 
+[mask  time="1000"  effect="fadeIn"  color="0x000000"  ]
 [tb_hide_message_window  ]
 [tb_ptext_hide  time="1000"  ]
-[iscript]
-alert("day13終了です");
-alert("今の好感度は"+f.likability+"です");
-[endscript]
+[tb_start_tyrano_code]
+[freeimage layer="base"]
+[_tb_end_tyrano_code]
 
 [chara_hide_all  time="1000"  wait="true"  ]
-[tb_image_hide  time="1000"  ]
 [jump  storage="day14.ks"  target="*day14_start"  ]
 [s  ]

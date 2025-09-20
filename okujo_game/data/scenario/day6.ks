@@ -2,6 +2,16 @@
 
 *day6_start
 
+[mask_off  time="1000"  effect="fadeOut"  ]
+[tb_start_tyrano_code]
+[if exp="TYRANO.kag.stat.current_bgm !== 'BGM/day.mp3'"]
+[_tb_end_tyrano_code]
+
+[playbgm  volume="50"  time="1000"  loop="true"  storage="BGM/day.mp3"  ]
+[tb_start_tyrano_code]
+[endif]
+[_tb_end_tyrano_code]
+
 [cm  ]
 [tb_eval  exp="f.likability+=0"  name="likability"  cmd="+="  op="t"  val="0"  ]
 [bg  storage="room.jpg"  time="1000"  ]
@@ -18,11 +28,14 @@
 [tb_show_message_window  ]
 [tb_start_text mode=1 ]
 屋上には人影がなかった。[p]
+と、そこに階段を上る足音が聞こえた。[p]
 [_tb_end_text]
 
+[playse  volume="100"  time="1000"  buf="1"  storage="climbing-the-stairs-cut.mp3"  clear="true"  ]
+[wait  time="2000"  ]
+[playse  volume="50"  time="1000"  buf="0"  storage="鉄の扉を開ける.mp3"  ]
 [chara_show  name="mizuki"  time="1000"  wait="true"  storage="chara/1/mzk_normal.png"  width="365"  height="865"  left="320"  top="70"  reflect="false"  ]
 [tb_start_text mode=1 ]
-と、そこに階段を上る足音が聞こえた。[p]
 #瑞希
 「先輩、来てたんだ」[p]
 #
@@ -44,6 +57,10 @@
 [tb_start_text mode=1 ]
 瑞希くんは欠伸をした。[p]
 しばらくして瑞希くんは僕から見えない塔屋の裏側に移動してしまった。[p]
+#類
+（寝にいったのかな……？）[p]
+（なんだか猫みたいだな）[p]
+#
 [_tb_end_text]
 
 [jump  storage="day6.ks"  target="*day_end"  ]
@@ -52,6 +69,13 @@
 [tb_start_text mode=1 ]
 瑞希くんは欠伸をしている。[p]
 しばらくするとこくりこくりと船を漕ぎだした。[p]
+[_tb_end_text]
+
+[chara_mod  name="rui"  time="600"  cross="true"  storage="chara/2/rui_mouthopen.png"  ]
+[tb_start_text mode=1 ]
+#類
+（頭をぶつけそうだけど、だいじょうぶかな）[p]
+#
 [_tb_end_text]
 
 [jump  storage="day6.ks"  target="*day_end"  ]
@@ -65,8 +89,7 @@
 #類
 「瑞希くんは昨日の皆既月食を見たかい？」[p]
 #瑞希
-「そういえば昨日だったね。昨日は外は見なかったなぁ。[p]
-先輩は見たの？」[p]
+「そういえば昨日だったね。昨日は外は見なかったなぁ。先輩は見たの？」[p]
 #類
 「自分の部屋の窓から少しだけね。[p]
 肉眼で見てもはっとするほど赤く見えて、中世まで不吉の予兆だと言われていたのも頷けたよ。[p]
@@ -75,9 +98,22 @@
 #
 [_tb_end_text]
 
+[chara_mod  name="mizuki"  time="600"  cross="true"  storage="chara/1/mzk_seme.png"  ]
 [jump  storage="day6.ks"  target="*雑談_好感度高"  cond="f.likability>6"  ]
 [tb_start_text mode=1 ]
+話しているうちについ夢中になって、気が付いたら月食をモチーフにした戯曲について、だいぶ長く話してしまった。[p]
+#類
+（しまった……。瑞希くんは退屈だったんじゃないだろうか）[p]
+#
+
+[_tb_end_text]
+
+[chara_mod  name="mizuki"  time="600"  cross="true"  storage="chara/1/mzk_eyeclose.png"  ]
+[tb_start_text mode=1 ]
 瑞希くんはうとうとしている。[p]
+#類
+（僕の話が子守歌になったのならまぁいいか）[p]
+#
 [_tb_end_text]
 
 [jump  storage="day6.ks"  target="*day_end"  ]
@@ -86,6 +122,10 @@
 
 [tb_start_text mode=1 ]
 瑞希くんはたまに半眼になりながらも、最後まで僕の話を聞いてくれた。[p]
+#類
+（眠かっただろうに、申し訳なかったな……）[p]
+#
+目をぱちぱちと瞬きながら眠気に耐えていた瑞希くんを思い出したら、胸の奥があたたかくなったような気がした。[p]
 [_tb_end_text]
 
 [jump  storage="day6.ks"  target="*day_end"  ]
@@ -100,10 +140,20 @@
 #類
 「今日はおやつを持ってきたんだ」[p]
 #
+[_tb_end_text]
+
+[chara_mod  name="rui"  time="600"  cross="true"  storage="chara/2/rui_wink.png"  ]
+[tb_start_text mode=1 ]
 僕はバッグからスマートフォンより一回りほど大きい、薄型の装置を取り出した。[p]
 カバーを外すと、表面には渦巻き型のニクロム線の上に金属製の網が嵌まっている。[p]
 #瑞希
 「……それ、なに？」[p]
+#
+[_tb_end_text]
+
+[chara_move  name="rui"  anim="false"  time="300"  effect="linear"  wait="true"  left="150"  top="0"  width="400"  height="950"  ]
+[chara_show  name="mizuki"  time="1000"  wait="true"  storage="chara/1/mzk_komari.png"  width="365"  height="865"  left="510"  top="70"  reflect="false"  ]
+[tb_start_text mode=1 ]
 #類
 「ラジエントヒーターだよ。モバイルバッテリーの出力で作動するように改造してみたんだ」[p]
 #
@@ -115,6 +165,7 @@
 僕は紙皿を取り出して、醤油のミニパックの封を切った。[p]
 [_tb_end_text]
 
+[chara_mod  name="mizuki"  time="600"  cross="true"  storage="chara/1/mzk_mouthopen.png"  ]
 [chara_mod  name="rui"  time="600"  cross="true"  storage="chara/2/rui_takurami.png"  ]
 [tb_start_text mode=1 ]
 #類
@@ -122,7 +173,7 @@
 #
 [_tb_end_text]
 
-[chara_mod  name="mizuki"  time="600"  cross="true"  storage="chara/1/mzk_mouthopen.png"  ]
+[chara_mod  name="mizuki"  time="600"  cross="true"  storage="chara/1/mzk_komari.png"  ]
 [tb_start_text mode=1 ]
 #瑞希
 「先輩とポップコーンなんて、嫌な予感しかしない組み合わせなんだけど……」[p]
@@ -185,14 +236,14 @@
 
 [tb_eval  exp="f.likability+=1"  name="likability"  cmd="+="  op="t"  val="1"  ]
 [chara_hide  name="mizuki"  time="1000"  wait="true"  pos_mode="true"  ]
-[chara_show  name="rui"  time="1000"  wait="true"  storage="chara/2/rui_normal.png"  width="400"  height="950"  ]
+[chara_show  name="rui"  time="1000"  wait="true"  storage="chara/2/rui_normal.png"  width="400"  height="950"  left="280"  top="0"  ]
 [tb_show_message_window  ]
 [tb_start_text mode=1 ]
 僕は小型ロボットの製作を進めることにした。[p]
 [_tb_end_text]
 
-[chara_mod  name="rui"  time="600"  cross="true"  storage="chara/2/rui_takurami.png"  ]
 [chara_move  name="rui"  anim="false"  time="300"  effect="linear"  wait="true"  left="150"  top="0"  width="400"  height="950"  ]
+[chara_mod  name="rui"  time="600"  cross="true"  storage="chara/2/rui_takurami.png"  ]
 [chara_show  name="mizuki"  time="1000"  wait="true"  storage="chara/1/mzk_normal.png"  width="365"  height="865"  left="510"  top="70"  reflect="false"  ]
 [jump  storage="day6.ks"  target="*作業をする_好感度高"  cond="f.likability>6"  ]
 [tb_start_text mode=1 ]
@@ -214,14 +265,13 @@
 [s  ]
 *day_end
 
+[mask  time="1000"  effect="fadeIn"  color="0x000000"  ]
 [tb_hide_message_window  ]
 [tb_ptext_hide  time="1000"  ]
-[iscript]
-alert("day6終了です");
-alert("今の好感度は"+f.likability+"です");
-[endscript]
+[tb_start_tyrano_code]
+[freeimage layer="base"]
+[_tb_end_tyrano_code]
 
 [chara_hide_all  time="1000"  wait="true"  ]
-[tb_image_hide  time="1000"  ]
 [jump  storage="day7.ks"  target="*day7_start"  ]
 [s  ]

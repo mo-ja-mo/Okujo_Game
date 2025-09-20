@@ -2,6 +2,16 @@
 
 *day16_start
 
+[mask_off  time="1000"  effect="fadeOut"  ]
+[tb_start_tyrano_code]
+[if exp="TYRANO.kag.stat.current_bgm !== 'BGM/day.mp3'"]
+[_tb_end_tyrano_code]
+
+[playbgm  volume="50"  time="1000"  loop="true"  storage="BGM/day.mp3"  ]
+[tb_start_tyrano_code]
+[endif]
+[_tb_end_tyrano_code]
+
 [cm  ]
 [tb_eval  exp="f.likability+=0"  name="likability"  cmd="+="  op="t"  val="0"  ]
 [bg  storage="room.jpg"  time="1000"  ]
@@ -93,8 +103,9 @@
 悪いと思ったのか瑞希くんは座ってサンタ帽をかぶってくれた。[p]
 [_tb_end_text]
 
-[chara_part  name="mizuki"  time="1000"  santa_bou="santabou_mzk.png"  wait="true"  ]
-[chara_mod  name="mizuki"  time="600"  cross="true"  storage="chara/1/base.png"  ]
+[playbgm  volume="10"  time="1000"  loop="true"  storage="BGM/ジングルベル〜きよしこの夜.mp3"  fadein="true"  ]
+[chara_mod  name="mizuki"  time="0"  cross="false"  storage="chara/1/base.png"  ]
+[chara_part  name="mizuki"  time="600"  santa_bou="santabou_mzk.png"  wait="true"  ]
 [tb_start_text mode=1 ]
 #類
 「では、クリスマスパーティのスタートだね」[p]
@@ -103,8 +114,6 @@
 クリスマスソングが流れて、サンタとトナカイを模した三体のロボットが、音楽に合わせて踊り始める。[p]
 [_tb_end_text]
 
-[stopbgm  time="1000"  ]
-[playse  volume="100"  time="1000"  buf="0"  storage="ジングルベル〜きよしこの夜.mp3"  loop="true"  ]
 [tb_start_text mode=1 ]
 僕は瑞希くんの隣に置いたエアークッションに座って、チキンを手に取った。[p]
 #類
@@ -139,8 +148,13 @@
 [_tb_end_text]
 
 [tb_hide_message_window  ]
-[chara_hide_all  time="1000"  wait="true"  ]
-[bg  time="2000"  method="crossfade"  storage="イベント/xmas.png"  ]
+[mask  time="0"  effect="fadeIn"  color="0x000000"  ]
+[chara_part  name="mizuki"  time="0"  santa_bou="none"  ]
+[chara_part  name="rui"  time="0"  santa_bou="none"  ]
+[chara_hide_all  time="0"  wait="false"  ]
+[bg  time="1000"  method="crossfade"  storage="イベント/xmas.png"  ]
+[mask_off  time="0"  effect="fadeOut"  ]
+[wait  time="2000"  ]
 [tb_show_message_window  ]
 [tb_start_text mode=1 ]
 #類
@@ -150,10 +164,9 @@
 #
 全長30センチ程のその茶色いテディベアは、背中にゼンマイを模したスイッチがついている。[p]
 スイッチを入れると、オルゴールのクリスマスソングが流れて、テディベアが緩やかに踊り出した。[p]
-
 [_tb_end_text]
 
-[playse  volume="100"  time="1000"  buf="1"  storage="We_Wish_You_a_Merry_Christmas（オルゴールVer.）.mp3"  clear="true"  ]
+[playbgm  volume="15"  time="1000"  loop="true"  storage="BGM/We_Wish_You_a_Merry_Christmas（オルゴールVer.）.mp3"  ]
 [tb_start_text mode=1 ]
 #瑞希
 「わ！カワイイ！」[p]
@@ -166,6 +179,7 @@
 （ショー用のロボットとは違って、可動域が小さくて単調な動きしか出来ないけれど、その分壊れにくいし一回の充電で数時間は使えるはずだ。[p]
 僕が卒業した後も、なるべく壊れずに長く動いてくれればいいのだけど）[p]
 「尻尾のところにはUSB-Cの充電ポートもあるから、手持ちのケーブルで充電可能だよ」[p]
+#
 [_tb_end_text]
 
 [tb_start_text mode=1 ]
@@ -200,19 +214,15 @@
 [_tb_end_text]
 
 [jump  storage="day16_eve_Xmas.ks"  target="*day_end"  ]
-[s  ]
 *day_end
 
+[mask  time="1000"  effect="fadeIn"  color="0x000000"  ]
 [tb_hide_message_window  ]
 [tb_ptext_hide  time="1000"  ]
-[iscript]
-alert("day16終了です");
-alert("今の好感度は"+f.likability+"です");
-[endscript]
+[tb_start_tyrano_code]
+[freeimage layer="base"]
+[_tb_end_tyrano_code]
 
-[chara_hide_all  time="1000"  wait="true"  ]
 [stopbgm  time="1000"  ]
-[stopse  time="1000"  buf="0"  ]
-[tb_image_hide  time="1000"  ]
 [jump  storage="day17_syugyousiki.ks"  target="*day17_start"  ]
 [s  ]

@@ -1,4 +1,4 @@
-[preload  storage="./data/bgimage/title.jpg"  ]
-[preload  storage="./data/fgimage/default/title.png"  ]
+[preload  storage="./data/bgimage/Attention.png"  ]
+[preload  storage="./data/bgimage/main2.png"  ]
 [preload  storage="./data/bgimage/bg_black.png"  ]
 [return]

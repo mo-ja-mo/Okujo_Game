@@ -4,6 +4,5 @@
 [preload  storage="./data/fgimage/chara/1/mzk_komari.png"  ]
 [preload  storage="./data/fgimage/chara/1/mzk_smile.png"  ]
 [preload  storage="./data/fgimage/chara/1/base.png"  ]
-[preload  storage="./data/fgimage/chara/1/mzk_smile.png"  ]
 [preload  storage="./data/bgimage/イベント/xmas.png"  ]
 [return]

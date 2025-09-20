@@ -2,6 +2,16 @@
 
 *day11_start
 
+[mask_off  time="1000"  effect="fadeOut"  ]
+[tb_start_tyrano_code]
+[if exp="TYRANO.kag.stat.current_bgm !== 'BGM/day.mp3'"]
+[_tb_end_tyrano_code]
+
+[playbgm  volume="50"  time="1000"  loop="true"  storage="BGM/day.mp3"  ]
+[tb_start_tyrano_code]
+[endif]
+[_tb_end_tyrano_code]
+
 [cm  ]
 [tb_eval  exp="f.likability+=0"  name="likability"  cmd="+="  op="t"  val="0"  val_2="undefined"  ]
 [bg  storage="room_cloudy.jpg"  time="1000"  ]
@@ -39,7 +49,7 @@
 僕はいつものように瑞希くんの隣に座った。[p]
 [_tb_end_text]
 
-[chara_mod  name="mizuki"  time="600"  cross="true"  storage="chara/1/mzk_angry.png"  ]
+[chara_mod  name="mizuki"  time="600"  cross="true"  storage="chara/1/mzk_akire_aozame.png"  ]
 [jump  storage="day11.ks"  target="*様子を見る_好感度高"  cond="f.likability>12"  ]
 [tb_start_text mode=1 ]
 瑞希くんは寒そうに膝を抱えている。[p]
@@ -53,7 +63,7 @@
 [_tb_end_text]
 
 [chara_move  name="mizuki"  anim="false"  time="300"  effect="linear"  wait="true"  left="510"  top="70"  width="365"  height="865"  ]
-[chara_show  name="rui"  time="1000"  wait="true"  storage="chara/2/rui_normal.png"  width="400"  height="950"  left="150"  top="0"  reflect="false"  ]
+[chara_show  name="rui"  time="1000"  wait="true"  storage="chara/2/rui_aseri.png"  width="400"  height="950"  left="150"  top="0"  reflect="false"  ]
 [tb_start_text mode=1 ]
 #類
 「……購買で何かあたたかい飲み物でも買ってくるよ」[p]
@@ -157,7 +167,7 @@
 
 [tb_eval  exp="f.likability+=1"  name="likability"  cmd="+="  op="t"  val="1"  ]
 [chara_hide  name="mizuki"  time="1000"  wait="true"  pos_mode="true"  ]
-[chara_show  name="rui"  time="1000"  wait="true"  storage="chara/2/rui_takurami.png"  width="400"  height="950"  ]
+[chara_show  name="rui"  time="1000"  wait="true"  storage="chara/2/rui_takurami.png"  width="400"  height="950"  left="280"  top="0"  ]
 [tb_show_message_window  ]
 [tb_start_text mode=1 ]
 僕は小型ロボットの製作を進めることにした。[p]
@@ -206,14 +216,13 @@
 [s  ]
 *day_end
 
+[mask  time="1000"  effect="fadeIn"  color="0x000000"  ]
 [tb_hide_message_window  ]
 [tb_ptext_hide  time="1000"  ]
-[iscript]
-alert("day11終了です");
-alert("今の好感度は"+f.likability+"です");
-[endscript]
+[tb_start_tyrano_code]
+[freeimage layer="base"]
+[_tb_end_tyrano_code]
 
 [chara_hide_all  time="1000"  wait="true"  ]
-[tb_image_hide  time="1000"  ]
 [jump  storage="day12_eve_test.ks"  target="*day12_start"  ]
 [s  ]
