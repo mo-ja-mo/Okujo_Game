@@ -50,8 +50,7 @@
 「いや……テスト勉強は？」[p]
 #類
 「テスト？……ああ、そういえば来週だったね」[p]
-＃[p]
-
+#
 [_tb_end_text]
 
 [chara_mod  name="mizuki"  time="600"  cross="true"  storage="chara/1/mzk_komari.png"  ]
@@ -61,7 +60,7 @@
 #類
 「フフ、隣で勉強させてもらうよ」[p]
 （テスト範囲の確認と……何をしようかな）[p]
-＃[p]
+#
 参考までに瑞希くんは……理科の問題集を開いているみたいだ。[p]
 [_tb_end_text]
 
@@ -72,7 +71,7 @@
 *丸付け
 
 [chara_hide_all  time="1000"  wait="true"  ]
-[playbgm  volume="50"  time="1000"  loop="true"  storage="BGM/honobono_1.mp3"  ]
+[playbgm  volume="100"  time="1000"  loop="true"  storage="BGM/honobono_1.mp3"  ]
 [tb_eval  exp="f.likability+=1"  name="likability"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
 [bg  time="2000"  method="fadeIn"  storage="イベント/event_test.png"  ]
 [tb_show_message_window  ]
@@ -111,7 +110,7 @@
 [chara_hide_all  time="1000"  wait="true"  ]
 [tb_eval  exp="f.likability+=1"  name="likability"  cmd="+="  op="t"  val="1"  ]
 [bg  time="2000"  method="fadeIn"  storage="イベント/event_test.png"  ]
-[playbgm  volume="50"  time="1000"  loop="true"  storage="BGM/honobono_1.mp3"  ]
+[playbgm  volume="100"  time="1000"  loop="true"  storage="BGM/honobono_1.mp3"  ]
 [tb_show_message_window  ]
 [tb_start_text mode=1 ]
 #瑞希
