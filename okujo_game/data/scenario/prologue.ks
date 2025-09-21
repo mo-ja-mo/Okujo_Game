@@ -1,5 +1,7 @@
 [_tb_system_call storage=system/_prologue.ks]
 
+*prologue_start
+
 [cm  ]
 [playbgm  volume="100"  time="1000"  loop="true"  storage="BGM/Prologue.mp3"  ]
 [tb_ptext_hide  time="1000"  ]
