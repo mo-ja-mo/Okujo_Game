@@ -49,7 +49,7 @@
 了承と受け取って、僕は瑞希くんの隣に腰を下ろした。[p]
 [_tb_end_text]
 
-[playbgm  volume="70"  time="1000"  loop="true"  storage="BGM/honobono_1.mp3"  fadein="false"  ]
+[playbgm  volume="100"  time="1000"  loop="true"  storage="BGM/honobono_1.mp3"  fadein="false"  ]
 [tb_hide_message_window  ]
 [glink  color="btn_02_black"  storage="day4_eve_yasai.ks"  size="20"  text="照り焼きチキンサンドを取り出す"  target="*照り焼き"  x="250"  y="250"  width="200"  height=""  _clickable_img=""  autopos="true"  ]
 [glink  color="btn_02_black"  storage="day4_eve_yasai.ks"  size="20"  target="*カレーパン"  text="カレーパンを取り出す"  autopos="true"  x="550"  y="250"  width="200"  height=""  _clickable_img=""  ]
@@ -244,6 +244,5 @@
 [_tb_end_tyrano_code]
 
 [chara_hide_all  time="1000"  wait="true"  ]
-
 [jump  storage="day5.ks"  target="*day5_start"  ]
 [s  ]

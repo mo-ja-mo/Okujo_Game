@@ -134,6 +134,7 @@
 
 [chara_move  name="mizuki"  anim="false"  time="300"  effect="linear"  wait="true"  left="510"  top="70"  width="365"  height="865"  ]
 [chara_show  name="rui"  time="1000"  wait="true"  storage="chara/2/base.png"  width="400"  height="950"  left="150"  top="0"  reflect="false"  ]
+[tb_show_message_window  ]
 [tb_start_text mode=1 ]
 #類
 （よく眠っているし、起こすのは忍びないけれど……瑞希くんも落第はしたくないだろうし、一度起こした方がいいだろう）[p]

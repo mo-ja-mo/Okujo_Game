@@ -99,7 +99,7 @@
 [chara_show  name="mizuki"  time="1000"  wait="true"  storage="chara/1/mzk_aseri_aozame.png"  width="365"  height="865"  left="510"  top="70"  reflect="false"  ]
 [tb_start_text mode=1 ]
 #瑞希
-「先輩、そこ汚いから汚れちゃうよ。……ボクの不注意だし、もういいよ」[p]
+「先輩、そこ汚いから制服が汚れちゃうよ。……ボクの不注意だし、もういいよ」[p]
 #類
 「でも、大事なものなんじゃないのかい？」[p]
 （もし落としたのがどうでもいいようなものなら、きっと瑞希くんはこんな顔をしてない）[p]
@@ -214,7 +214,7 @@
 [chara_show  name="mizuki"  time="1000"  wait="true"  storage="chara/1/mzk_mouthopen.png"  width="365"  height="865"  left="510"  top="70"  reflect="false"  ]
 [tb_start_text mode=1 ]
 #瑞希
-「先輩、そこ汚いから汚れちゃうよ。……ボクの不注意だし、もういいよ」[p]
+「先輩、そこ汚いから制服が汚れちゃうよ。……ボクの不注意だし、もういいよ」[p]
 #類
 「でも、大事なものなんじゃないのかい？」[p]
 （もし落としたのがどうでもいいようなものなら、きっと瑞希くんはこんな顔をしてない）[p]
