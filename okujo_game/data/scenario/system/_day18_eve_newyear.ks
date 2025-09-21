@@ -16,7 +16,6 @@
 [preload  storage="./data/fgimage/chara/3/mzk_shihuku_aseri.png"  ]
 [preload  storage="./data/fgimage/chara/4/rui_shihuku_aseri.png"  ]
 [preload  storage="./data/fgimage/chara/3/mzk_shihuku_akire.png"  ]
-[preload  storage="./data/fgimage/chara/3/mzk_shihuku_komari_sekimen.png"  ]
 [preload  storage="./data/fgimage/chara/4/rui_shihuku_smile.png"  ]
 [preload  storage="./data/bgimage/イベント/newyear_drink1.png"  ]
 [preload  storage="./data/bgimage/town2.jpg"  ]

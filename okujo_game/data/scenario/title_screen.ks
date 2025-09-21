@@ -23,8 +23,8 @@
 [bg  time="1000"  method="crossfade"  storage="bg_black.png"  ]
 [mask_off  time="100"  effect="fadeOut"  ]
 [tb_ptext_show  x="250"  y="200"  size="30"  color="0xffffff"  time="100"  text="プロローグをスキップしますか？"  face="sans-serif,'メイリオ'"  anim="false"  edge="undefined"  shadow="undefined"  ]
-[glink  color="white"  storage="day1.ks"  size="20"  text="はい"  autopos="false"  target="*day1_start"  x="300"  y="350"  width=""  height=""  _clickable_img=""  ]
-[glink  color="white"  storage="prologue.ks"  size="20"  text="いいえ"  target="*prologue_start"  autopos="false"  x="550"  y="350"  width=""  height=""  _clickable_img=""  ]
+[glink  color="white"  storage="day1.ks"  size="20"  text="はい"  autopos="false"  target="*day1_start"  x="300"  y="350"  width="47"  height="21"  _clickable_img=""  ]
+[glink  color="white"  storage="prologue.ks"  size="20"  text="いいえ"  target="*prologue_start"  autopos="false"  x="550"  y="350"  width="65"  height="18"  _clickable_img=""  ]
 [showmenubutton]
 
 [s  ]

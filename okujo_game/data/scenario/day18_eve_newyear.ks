@@ -476,7 +476,7 @@
 
 [_tb_end_text]
 
-[chara_mod  name="mizuki_sifuku"  time="600"  cross="true"  storage="chara/3/mzk_shihuku_komari_sekimen.png"  ]
+[chara_mod  name="mizuki_sifuku"  time="600"  cross="true"  storage="chara/3/mzk_shihuku_komari.png"  ]
 [tb_start_text mode=1 ]
 瑞希くんは明らかに困惑した顔で、僕とお守りを見比べている。[p]
 #類

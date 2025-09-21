@@ -39,6 +39,9 @@
 [_tb_end_text]
 
 [chara_show  name="mizuki"  time="1000"  wait="true"  storage="chara/1/base.png"  width="365"  height="865"  left="320"  top="70"  reflect="false"  ]
+[playse  volume="100"  time="1000"  buf="1"  storage="climbing-the-stairs-cut.mp3"  clear="true"  ]
+[wait  time="2000"  ]
+[playse  volume="50"  time="1000"  buf="0"  storage="鉄の扉を開ける.mp3"  ]
 [tb_start_text mode=1 ]
 #類
 「メリークリスマス！」[p]

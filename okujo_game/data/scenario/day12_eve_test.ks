@@ -143,7 +143,7 @@
 [_tb_end_text]
 
 [wait  time="1000"  ]
-[playse  volume="100"  time="1000"  buf="0"  storage="チャイム　キンコンカンコン.mp3"  ]
+[playse  volume="80"  time="1000"  buf="0"  storage="チャイム　キンコンカンコン.mp3"  ]
 [wait  time="3000"  ]
 [tb_start_text mode=1 ]
 #瑞希
