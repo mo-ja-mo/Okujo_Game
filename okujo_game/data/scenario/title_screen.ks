@@ -5,11 +5,11 @@
 [tb_clear_images]
 
 [tb_keyconfig  flag="0"  ]
-[playbgm  volume="50"  time="1000"  loop="true"  storage="BGM/title.mp3"  ]
 [tb_hide_message_window  ]
 [bg  time="1000"  method="crossfade"  storage="Attention.png"  ]
 [wait  time="2000"  ]
 [bg  storage="main2.png"  ]
+[playbgm  volume="50"  time="1000"  loop="true"  storage="BGM/title.mp3"  ]
 *title
 
 [glink  color="black"  text="はじめから"  x="160"  y="530"  size="24"  target="*start"  width=""  height=""  _clickable_img=""  ]
