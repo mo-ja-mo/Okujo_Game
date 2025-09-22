@@ -7,7 +7,7 @@
 [if exp="TYRANO.kag.stat.current_bgm !== 'BGM/day.mp3'"]
 [_tb_end_tyrano_code]
 
-[playbgm  volume="100"  time="1000"  loop="true"  storage="BGM/day.mp3"  ]
+[playbgm  volume="80"  time="1000"  loop="true"  storage="BGM/day.mp3"  ]
 [tb_start_tyrano_code]
 [endif]
 [_tb_end_tyrano_code]
@@ -239,7 +239,7 @@
 ドライバーの先がバッジに届いた！[p]
 [_tb_end_text]
 
-[playse  volume="100"  time="1000"  buf="0"  storage="magnets.mp3"  clear="true"  ]
+[playse  volume="80"  time="1000"  buf="0"  storage="magnets.mp3"  clear="true"  ]
 [wait  time="1000"  ]
 [tb_start_text mode=1 ]
 #類

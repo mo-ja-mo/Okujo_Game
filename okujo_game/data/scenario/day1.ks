@@ -4,7 +4,7 @@
 
 [tb_ptext_hide  time="1000"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
-[playbgm  volume="100"  time="1000"  loop="true"  storage="BGM/day.mp3"  ]
+[playbgm  volume="80"  time="1000"  loop="true"  storage="BGM/day.mp3"  ]
 [cm  ]
 [bg  storage="room.jpg"  time="1000"  ]
 [tb_ptext_show  x="386.9999694824219"  y="218.00001525878906"  size="50"  color="0xded3d7"  time="2000"  text="Day&nbsp;1"  anim="false"  face="cursive"  edge="undefined"  shadow="0x140e0e"  ]
