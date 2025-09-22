@@ -7,7 +7,7 @@
 [if exp="TYRANO.kag.stat.current_bgm !== 'BGM/day.mp3'"]
 [_tb_end_tyrano_code]
 
-[playbgm  volume="50"  time="1000"  loop="true"  storage="BGM/day.mp3"  ]
+[playbgm  volume="100"  time="1000"  loop="true"  storage="BGM/day.mp3"  ]
 [tb_start_tyrano_code]
 [endif]
 [_tb_end_tyrano_code]
@@ -143,7 +143,7 @@
 [_tb_end_text]
 
 [wait  time="1000"  ]
-[playse  volume="80"  time="1000"  buf="0"  storage="チャイム　キンコンカンコン.mp3"  ]
+[playse  volume="40"  time="1000"  buf="0"  storage="チャイム　キンコンカンコン.mp3"  ]
 [wait  time="3000"  ]
 [tb_start_text mode=1 ]
 #瑞希

@@ -7,7 +7,7 @@
 [if exp="TYRANO.kag.stat.current_bgm !== 'BGM/day.mp3'"]
 [_tb_end_tyrano_code]
 
-[playbgm  volume="50"  time="1000"  loop="true"  storage="BGM/day.mp3"  ]
+[playbgm  volume="100"  time="1000"  loop="true"  storage="BGM/day.mp3"  ]
 [tb_start_tyrano_code]
 [endif]
 [_tb_end_tyrano_code]
@@ -39,8 +39,8 @@
 [_tb_end_text]
 
 [chara_show  name="mizuki"  time="1000"  wait="true"  storage="chara/1/base.png"  width="365"  height="865"  left="320"  top="70"  reflect="false"  ]
-[playse  volume="100"  time="1000"  buf="1"  storage="climbing-the-stairs-cut.mp3"  clear="true"  ]
-[wait  time="2000"  ]
+[playse  volume="50"  time="1000"  buf="1"  storage="climbing-the-stairs-cut.mp3"  clear="true"  ]
+[wait  time="1000"  ]
 [playse  volume="50"  time="1000"  buf="0"  storage="鉄の扉を開ける.mp3"  ]
 [tb_start_text mode=1 ]
 #類
@@ -106,7 +106,7 @@
 悪いと思ったのか瑞希くんは座ってサンタ帽をかぶってくれた。[p]
 [_tb_end_text]
 
-[playbgm  volume="10"  time="1000"  loop="true"  storage="BGM/ジングルベル〜きよしこの夜.mp3"  fadein="true"  ]
+[playbgm  volume="80"  time="1000"  loop="true"  storage="BGM/ジングルベル〜きよしこの夜.mp3"  fadein="true"  ]
 [chara_mod  name="mizuki"  time="0"  cross="false"  storage="chara/1/base.png"  ]
 [chara_part  name="mizuki"  time="600"  santa_bou="santabou_mzk.png"  wait="true"  ]
 [tb_start_text mode=1 ]
@@ -169,7 +169,7 @@
 スイッチを入れると、オルゴールのクリスマスソングが流れて、テディベアが緩やかに踊り出した。[p]
 [_tb_end_text]
 
-[playbgm  volume="15"  time="1000"  loop="true"  storage="BGM/We_Wish_You_a_Merry_Christmas（オルゴールVer.）.mp3"  ]
+[playbgm  volume="100"  time="1000"  loop="true"  storage="BGM/We_Wish_You_a_Merry_Christmas（オルゴールVer.）.mp3"  ]
 [tb_start_text mode=1 ]
 #瑞希
 「わ！カワイイ！」[p]

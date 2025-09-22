@@ -7,7 +7,7 @@
 [if exp="TYRANO.kag.stat.current_bgm !== 'BGM/day.mp3'"]
 [_tb_end_tyrano_code]
 
-[playbgm  volume="50"  time="1000"  loop="true"  storage="BGM/day.mp3"  ]
+[playbgm  volume="100"  time="1000"  loop="true"  storage="BGM/day.mp3"  ]
 [tb_start_tyrano_code]
 [endif]
 [_tb_end_tyrano_code]
@@ -94,8 +94,8 @@
 いつもならすぐ没頭できるのに、なんだか落ち着かない。[p]
 [_tb_end_text]
 
-[playse  volume="100"  time="1000"  buf="1"  storage="climbing-the-stairs-cut.mp3"  clear="true"  ]
-[wait  time="2000"  ]
+[playse  volume="50"  time="1000"  buf="1"  storage="climbing-the-stairs-cut.mp3"  clear="true"  ]
+[wait  time="1000"  ]
 [playse  volume="50"  time="1000"  buf="0"  storage="鉄の扉を開ける.mp3"  ]
 [tb_start_text mode=1 ]
 足音がして、瑞希くんが屋上に現れた。[p]

@@ -2,11 +2,15 @@
 
 *day2_start
 
+
+;同じ曲が既に流れている場合は再読み込みしない
+
+
 [tb_start_tyrano_code]
 [if exp="TYRANO.kag.stat.current_bgm !== 'BGM/day.mp3'"]
 [_tb_end_tyrano_code]
 
-[playbgm  volume="50"  time="1000"  loop="true"  storage="BGM/day.mp3"  ]
+[playbgm  volume="100"  time="1000"  loop="true"  storage="BGM/day.mp3"  ]
 [tb_start_tyrano_code]
 [endif]
 [_tb_end_tyrano_code]
@@ -31,8 +35,12 @@
 と、そこに階段を上る足音が聞こえた。[p]
 [_tb_end_text]
 
-[playse  volume="100"  time="1000"  buf="1"  storage="climbing-the-stairs-cut.mp3"  clear="true"  ]
-[wait  time="2000"  ]
+
+;足音と扉を開ける音
+
+
+[playse  volume="50"  time="1000"  buf="1"  storage="climbing-the-stairs-cut.mp3"  clear="true"  ]
+[wait  time="1000"  ]
 [playse  volume="50"  time="1000"  buf="0"  storage="鉄の扉を開ける.mp3"  ]
 [chara_show  name="mizuki"  time="1000"  wait="true"  storage="chara/1/mzk_normal.png"  width="365"  height="865"  left="320"  top="70"  reflect="false"  ]
 [tb_start_text mode=1 ]
@@ -56,6 +64,10 @@
 [tb_eval  exp="f.likability+=1"  name="likability"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
 [tb_show_message_window  ]
 [jump  storage="day2.ks"  target="*様子を見る_好感度高"  cond="f.likability>5"  ]
+
+;好感度の低の場合
+
+
 [tb_start_text mode=1 ]
 瑞希くんは宿題をやっているようだ。[p]
 #類
@@ -76,7 +88,7 @@
 
 [chara_move  name="mizuki"  anim="false"  time="300"  effect="linear"  wait="true"  left="510"  top="70"  width="365"  height="865"  ]
 [chara_show  name="rui"  time="1000"  wait="true"  storage="chara/2/rui_normal.png"  width="400"  height="950"  left="150"  top="0"  reflect="false"  ]
-[tb_eval  exp="f.likability+=1"  name="likability"  cmd="+="  op="t"  val="1"  ]
+[tb_eval  exp="f.likability+=2"  name="likability"  cmd="+="  op="t"  val="2"  val_2="undefined"  ]
 [tb_show_message_window  ]
 [tb_start_text mode=1 ]
 空を見上げると筋状の雲が見えた。[p]
@@ -105,7 +117,7 @@
 [s  ]
 *サプライズをする
 
-[tb_eval  exp="f.likability+=1"  name="likability"  cmd="+="  op="t"  val="1"  ]
+[tb_eval  exp="f.likability+=2"  name="likability"  cmd="+="  op="t"  val="2"  val_2="undefined"  ]
 [chara_move  name="mizuki"  anim="false"  time="300"  effect="linear"  wait="true"  left="510"  top="70"  width="365"  height="865"  ]
 [chara_show  name="rui"  time="1000"  wait="true"  storage="chara/2/rui_normal.png"  width="400"  height="950"  left="150"  top="0"  reflect="false"  ]
 [tb_show_message_window  ]

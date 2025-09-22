@@ -7,7 +7,7 @@
 [if exp="TYRANO.kag.stat.current_bgm !== 'BGM/day.mp3'"]
 [_tb_end_tyrano_code]
 
-[playbgm  volume="50"  time="1000"  loop="true"  storage="BGM/day.mp3"  ]
+[playbgm  volume="100"  time="1000"  loop="true"  storage="BGM/day.mp3"  ]
 [tb_start_tyrano_code]
 [endif]
 [_tb_end_tyrano_code]

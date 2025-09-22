@@ -42,7 +42,7 @@
 ;maxBackLogNum=50
 ;autoRecordLabel=true
 ;unReadTextSkip=false
-;alreadyReadTextColor=0x87cefa
+;alreadyReadTextColor=0x52498a
 ;numCharacterLayers=3
 ;scPositionX.left=160
 ;scPositionX.left_center=240

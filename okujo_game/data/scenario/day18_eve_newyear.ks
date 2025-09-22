@@ -7,7 +7,7 @@
 [if exp="TYRANO.kag.stat.current_bgm !== 'BGM/day.mp3'"]
 [_tb_end_tyrano_code]
 
-[playbgm  volume="50"  time="1000"  loop="true"  storage="BGM/day.mp3"  ]
+[playbgm  volume="100"  time="1000"  loop="true"  storage="BGM/day.mp3"  ]
 [tb_start_tyrano_code]
 [endif]
 [_tb_end_tyrano_code]
@@ -53,7 +53,7 @@
 
 [chara_hide_all  time="1000"  wait="true"  ]
 [tb_hide_message_window  ]
-[playbgm  volume="30"  time="1000"  loop="true"  storage="BGM/hatumoude.mp3"  ]
+[playbgm  volume="100"  time="1000"  loop="true"  storage="BGM/hatumoude.mp3"  ]
 [bg  time="1000"  method="fadeIn"  storage="shinto_shrine04.png"  ]
 [tb_show_message_window  ]
 [tb_start_text mode=1 ]
@@ -303,7 +303,7 @@
 [playse  volume="100"  time="1000"  buf="0"  storage="自販機からジュースを取り出す音.mp3"  clear="true"  ]
 [tb_hide_message_window  ]
 [chara_hide_all  time="1000"  wait="true"  ]
-[playbgm  volume="20"  time="1000"  loop="true"  storage="BGM/maou_bgm_healing15.mp3"  fadein="true"  ]
+[playbgm  volume="100"  time="1000"  loop="true"  storage="BGM/mattari.mp3"  fadein="true"  ]
 [bg  time="2000"  method="fadeIn"  storage="イベント/newyear_drink2.png"  ]
 [tb_show_message_window  ]
 [tb_start_text mode=1 ]
@@ -324,7 +324,7 @@
 [_tb_end_text]
 
 [bg  time="1000"  method="crossfade"  storage="shinto_shrine04.png"  ]
-[playbgm  volume="30"  time="1000"  loop="true"  storage="BGM/hatumoude.mp3"  fadein="true"  ]
+[playbgm  volume="100"  time="1000"  loop="true"  storage="BGM/hatumoude.mp3"  fadein="true"  ]
 [chara_show  name="mizuki_sifuku"  time="1000"  wait="true"  storage="chara/3/mzk_shihuku_normal.png"  width="365"  height="865"  left="510"  top="70"  ]
 [chara_show  name="rui_shifuku"  time="1000"  wait="true"  storage="chara/4/rui_shihuku_normal.png"  width="400"  height="950"  left="150"  top="0"  reflect="false"  ]
 [jump  storage="day18_eve_newyear.ks"  target="*何する2"  ]
@@ -608,7 +608,7 @@
 [tb_hide_message_window  ]
 [chara_hide_all  time="1000"  wait="true"  ]
 [tb_eval  exp="sf.skip_flag+=1"  name="skip_flag"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
-[playbgm  volume="20"  time="1000"  loop="true"  storage="BGM/ending.mp3"  ]
+[playbgm  volume="100"  time="1000"  loop="true"  storage="BGM/ending.mp3"  ]
 [bg  time="1000"  method="crossfade"  storage="town2.jpg"  ]
 [chara_show  name="mizuki_sifuku"  time="1000"  wait="true"  storage="chara/3/mzk_shihuku_normal.png"  width="365"  height="865"  left="510"  top="70"  ]
 [chara_show  name="rui_shifuku"  time="1000"  wait="true"  storage="chara/4/rui_shihuku_normal.png"  width="400"  height="950"  left="150"  top="0"  reflect="false"  ]
@@ -683,7 +683,7 @@
 [_tb_end_tyrano_code]
 
 [chara_hide_all  time="1000"  wait="true"  ]
-[playbgm  volume="20"  time="1000"  loop="true"  storage="BGM/hoshinomatataki.mp3"  ]
+[playbgm  volume="100"  time="1000"  loop="true"  storage="BGM/endrole.mp3"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [bg  time="2000"  method="crossfade"  storage="credit.png"  ]
 [tb_eval  exp="sf.skip_flag+=1"  name="skip_flag"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]

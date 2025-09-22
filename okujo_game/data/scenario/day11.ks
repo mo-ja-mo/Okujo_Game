@@ -7,7 +7,7 @@
 [if exp="TYRANO.kag.stat.current_bgm !== 'BGM/day.mp3'"]
 [_tb_end_tyrano_code]
 
-[playbgm  volume="50"  time="1000"  loop="true"  storage="BGM/day.mp3"  ]
+[playbgm  volume="100"  time="1000"  loop="true"  storage="BGM/day.mp3"  ]
 [tb_start_tyrano_code]
 [endif]
 [_tb_end_tyrano_code]
@@ -100,7 +100,9 @@
 #
 [_tb_end_text]
 
+[mask  time="500"  effect="fadeIn"  color="0x000000"  ]
 [bg  time="1000"  method="crossfade"  storage="odoriba.png"  ]
+[mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
 僕らは放課後まで屋上に出る扉の前の踊り場で過ごした。[p]
 [_tb_end_text]
@@ -116,7 +118,9 @@
 瑞希くんは呆れたようにそう言ったけれど、案外あっさりと踊り場に移動してくれた。[p]
 [_tb_end_text]
 
+[mask  time="500"  effect="fadeIn"  color="0x000000"  ]
 [bg  time="1000"  method="crossfade"  storage="odoriba.png"  ]
+[mask  time="1000"  effect="fadeIn"  color="0x000000"  ]
 [tb_start_text mode=1 ]
 僕らは放課後まで屋上に出る扉の前の踊り場で過ごした。[p]
 [_tb_end_text]
@@ -183,7 +187,9 @@
 [s  ]
 *作業をする_好感度高
 
+[mask  time="500"  effect="fadeIn"  color="0x000000"  ]
 [bg  time="1000"  method="crossfade"  storage="okujo_rainy.png"  ]
+[mask_off  time="500"  effect="fadeOut"  ]
 [chara_move  name="rui"  anim="false"  time="300"  effect="linear"  wait="true"  left="150"  top="0"  width="400"  height="950"  ]
 [chara_show  name="mizuki"  time="1000"  wait="true"  storage="chara/1/mzk_normal.png"  width="365"  height="865"  left="510"  top="70"  reflect="false"  ]
 [tb_start_text mode=1 ]
@@ -193,7 +199,9 @@
 顔を上げるといつの間にか雨が降っていた。[p]
 [_tb_end_text]
 
+[mask  time="500"  effect="fadeIn"  color="0x000000"  ]
 [bg  time="1000"  method="crossfade"  storage="odoriba.png"  ]
+[mask_off  time="500"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
 僕らは放課後まで屋上に出る扉の前の踊り場で過ごした。[p]
 [_tb_end_text]

@@ -7,7 +7,7 @@
 [if exp="TYRANO.kag.stat.current_bgm !== 'BGM/day.mp3'"]
 [_tb_end_tyrano_code]
 
-[playbgm  volume="50"  time="1000"  loop="true"  storage="BGM/day.mp3"  ]
+[playbgm  volume="100"  time="1000"  loop="true"  storage="BGM/day.mp3"  ]
 [tb_start_tyrano_code]
 [endif]
 [_tb_end_tyrano_code]
@@ -31,7 +31,9 @@
 *図書室
 
 [tb_eval  exp="f.likability+=0"  name="likability"  cmd="+="  op="t"  val="0"  val_2="undefined"  ]
+[mask  time="500"  effect="fadeIn"  color="0x000000"  ]
 [bg  time="1000"  method="crossfade"  storage="libraty_cloudy.jpg"  ]
+[mask_off  time="500"  effect="fadeOut"  ]
 [tb_show_message_window  ]
 [tb_start_text mode=1 ]
 僕は図書室で本を読むことにした。[p]
@@ -49,7 +51,7 @@
 [_tb_end_text]
 
 [tb_hide_message_window  ]
-[playbgm  volume="15"  time="1000"  loop="true"  storage="BGM/maou_bgm_healing15.mp3"  ]
+[playbgm  volume="100"  time="1000"  loop="true"  storage="BGM/mattari.mp3"  ]
 [bg  time="1000"  method="fadeIn"  storage="odoriba.png"  ]
 [chara_show  name="mizuki"  time="1000"  wait="true"  storage="chara/1/mzk_normal.png"  width="365"  height="865"  left="320"  top="70"  reflect="false"  ]
 [tb_show_message_window  ]

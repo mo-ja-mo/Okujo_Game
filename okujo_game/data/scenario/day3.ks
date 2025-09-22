@@ -7,7 +7,7 @@
 [if exp="TYRANO.kag.stat.current_bgm !== 'BGM/day.mp3'"]
 [_tb_end_tyrano_code]
 
-[playbgm  volume="50"  time="1000"  loop="true"  storage="BGM/day.mp3"  ]
+[playbgm  volume="100"  time="1000"  loop="true"  storage="BGM/day.mp3"  ]
 [tb_start_tyrano_code]
 [endif]
 [_tb_end_tyrano_code]
@@ -48,7 +48,7 @@
 [_tb_end_text]
 
 [chara_mod  name="mizuki"  time="600"  cross="true"  storage="chara/1/mzk_odoroki.png"  ]
-[playse  volume="100"  time="1000"  buf="0"  storage="drop.m4a"  clear="true"  ]
+[playse  volume="100"  time="1000"  buf="0"  storage="drop_cut2.mp3"  clear="true"  ]
 [tb_start_text mode=1 ]
 小さく呟く声に視線を向けると、瑞希くんのバッグから大きな缶バッジのようなものが落ちて転がっていくのが見えた。[p]
 大事なものなのか、瑞希くんは慌てて立ち上がって追いかけたが、缶バッジは縦にどんどん転がって、屋上の柵の隙間から落ちていった。[p]
@@ -61,7 +61,7 @@
 #
 [_tb_end_text]
 
-[playbgm  volume="15"  time="1000"  loop="true"  storage="BGM/不穏.mp3"  ]
+[playbgm  volume="100"  time="1000"  loop="true"  storage="BGM/不穏.mp3"  ]
 [chara_move  name="mizuki"  anim="false"  time="300"  effect="linear"  wait="true"  width="365"  height="865"  left="510"  top="70"  ]
 [chara_mod  name="mizuki"  time="600"  cross="true"  storage="chara/1/mzk_aseri_aozame.png"  ]
 [chara_show  name="rui"  time="1000"  wait="true"  storage="chara/2/rui_normal.png"  width="400"  height="950"  left="150"  top="0"  reflect="false"  ]

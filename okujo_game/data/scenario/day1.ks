@@ -4,7 +4,7 @@
 
 [tb_ptext_hide  time="1000"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
-[playbgm  volume="50"  time="1000"  loop="true"  storage="BGM/day.mp3"  ]
+[playbgm  volume="100"  time="1000"  loop="true"  storage="BGM/day.mp3"  ]
 [cm  ]
 [bg  storage="room.jpg"  time="1000"  ]
 [tb_ptext_show  x="386.9999694824219"  y="218.00001525878906"  size="50"  color="0xded3d7"  time="2000"  text="Day&nbsp;1"  anim="false"  face="cursive"  edge="undefined"  shadow="0x140e0e"  ]
@@ -47,6 +47,10 @@
 僕は瑞希くんから少し距離を取って座った。[p]
 [_tb_end_text]
 
+
+;定型分岐
+
+
 [tb_hide_message_window  ]
 [glink  color="btn_02_black"  storage="day1.ks"  size="20"  text="様子を見る"  target="*様子を見る"  x="250"  y="200"  width="200"  height=""  _clickable_img=""  ]
 [glink  color="btn_02_black"  storage="day1.ks"  size="20"  target="*雑談をする"  text="雑談をする"  autopos="false"  x="550"  y="200"  width="200"  height=""  _clickable_img=""  ]
@@ -57,7 +61,15 @@
 
 [tb_eval  exp="f.likability+=1"  name="likability"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
 [tb_show_message_window  ]
+
+;好感度が設定値以上の場合は「好感度高」の処理にジャンプする
+
+
 [jump  storage="day1.ks"  target="*様子を見る_好感度高"  cond="f.likability>5"  ]
+
+;好感度低の場合
+
+
 [tb_start_text mode=1 ]
 瑞希くんはぼーっと空を見ている。[p]
 #類
@@ -87,6 +99,10 @@
 [_tb_end_text]
 
 [jump  storage="day1.ks"  target="*雑談_好感度高"  cond="f.likability>5"  ]
+
+;好感度低の場合
+
+
 [tb_start_text mode=1 ]
 瑞希くんは小さく頷いてくれた。[p]
 #類
@@ -118,6 +134,10 @@
 [_tb_end_text]
 
 [jump  storage="day1.ks"  target="*サプライズ_好感度高"  cond="f.likability>5"  ]
+
+;好感度低の場合
+
+
 [tb_start_text mode=1 ]
 瑞希くんはちらりと僕を見上げてから、小さく首を振った。[p]
 #類
@@ -146,6 +166,10 @@
 [_tb_end_text]
 
 [jump  storage="day1.ks"  target="*作業をする_好感度高"  cond="f.likability>5"  ]
+
+;好感度低の場合
+
+
 [tb_start_text mode=1 ]
 瑞希くんは何も言わなかったが、何度か瑞希くんの視線を感じた。[p]
 [_tb_end_text]

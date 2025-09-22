@@ -7,7 +7,7 @@
 [if exp="TYRANO.kag.stat.current_bgm !== 'BGM/day.mp3'"]
 [_tb_end_tyrano_code]
 
-[playbgm  volume="50"  time="1000"  loop="true"  storage="BGM/day.mp3"  ]
+[playbgm  volume="100"  time="1000"  loop="true"  storage="BGM/day.mp3"  ]
 [tb_start_tyrano_code]
 [endif]
 [_tb_end_tyrano_code]
@@ -35,8 +35,8 @@
 瑞希くんは一限が終わった頃に来た。[p]
 [_tb_end_text]
 
-[playse  volume="100"  time="1000"  buf="1"  storage="climbing-the-stairs-cut.mp3"  clear="true"  ]
-[wait  time="2000"  ]
+[playse  volume="50"  time="1000"  buf="1"  storage="climbing-the-stairs-cut.mp3"  clear="true"  ]
+[wait  time="1000"  ]
 [playse  volume="50"  time="1000"  buf="0"  storage="鉄の扉を開ける.mp3"  ]
 [chara_show  name="mizuki"  time="1000"  wait="true"  storage="chara/1/mzk_normal.png"  width="365"  height="865"  left="320"  top="70"  reflect="false"  ]
 [tb_start_text mode=1 ]
@@ -171,17 +171,18 @@
 #瑞希
 「あ」[p]
 #
+風船はふわふわとゆっくり上っていき、頭上三メートルくらいの位置で破裂音を響かせて割れた。[p]
 [_tb_end_text]
 
 [chara_mod  name="mizuki"  time="600"  cross="true"  storage="chara/1/mzk_mouthopen.png"  ]
+[playse  volume="60"  time="1000"  buf="0"  storage="クラッカー4.mp3"  loop="false"  clear="true"  ]
 [tb_start_text mode=1 ]
-風船はふわふわとゆっくり上っていき、頭上三メートルくらいの位置で破裂音を響かせて割れた。[p]
+
 #類
 （うん。想定通りの位置だね）[p]
 #
 [_tb_end_text]
 
-[playse  volume="60"  time="1000"  buf="0"  storage="クラッカー4.mp3"  loop="false"  clear="true"  ]
 [layermode_movie  mode="screen"  speed="0.3"  volume="100"  loop="false"  time="100"  wait="false"  video="confetti_03_HD.mp4"  ]
 [tb_start_text mode=1 ]
 空からひらひらと銀色のテープや紙吹雪が降ってくる。[p]

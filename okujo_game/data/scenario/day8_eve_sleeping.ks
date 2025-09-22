@@ -7,7 +7,7 @@
 [if exp="TYRANO.kag.stat.current_bgm !== 'BGM/day.mp3'"]
 [_tb_end_tyrano_code]
 
-[playbgm  volume="50"  time="1000"  loop="true"  storage="BGM/day.mp3"  ]
+[playbgm  volume="100"  time="1000"  loop="true"  storage="BGM/day.mp3"  ]
 [tb_start_tyrano_code]
 [endif]
 [_tb_end_tyrano_code]
@@ -36,7 +36,7 @@
 瑞希くんは塔屋の壁によりかかって眠っているようだった。[p]
 [_tb_end_text]
 
-[playbgm  volume="15"  time="1000"  loop="true"  storage="BGM/maou_bgm_healing15.mp3"  ]
+[playbgm  volume="100"  time="1000"  loop="true"  storage="BGM/mattari.mp3"  ]
 [bg  time="1000"  method="crossfade"  storage="イベント/CG_sleep.png"  ]
 [tb_start_text mode=1 ]
 #類

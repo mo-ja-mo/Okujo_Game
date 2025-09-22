@@ -7,7 +7,7 @@
 [if exp="TYRANO.kag.stat.current_bgm !== 'BGM/day.mp3'"]
 [_tb_end_tyrano_code]
 
-[playbgm  volume="50"  time="1000"  loop="true"  storage="BGM/day.mp3"  ]
+[playbgm  volume="100"  time="1000"  loop="true"  storage="BGM/day.mp3"  ]
 [tb_start_tyrano_code]
 [endif]
 [_tb_end_tyrano_code]
@@ -169,7 +169,8 @@
 [s  ]
 *NormalEnd
 
-[playbgm  volume="15"  time="1000"  loop="true"  storage="BGM/ending.mp3"  ]
+[chara_mod  name="mizuki"  time="600"  cross="true"  storage="chara/1/base.png"  ]
+[playbgm  volume="100"  time="1000"  loop="true"  storage="BGM/ending.mp3"  ]
 [tb_show_message_window  ]
 [tb_start_text mode=1 ]
 #類
@@ -181,12 +182,22 @@
 #
 [_tb_end_text]
 
+[chara_mod  name="rui"  time="600"  cross="true"  storage="chara/2/rui_smile.png"  ]
 [tb_start_text mode=1 ]
 #類
 「中学に入ってからずっと、僕は義務感だけで学校に来ていたようなものだった」[p]
 「でも、ここで瑞希くんといろいろ話をするようになってから、学校に来るのが楽しみになったんだ」[p]
+#
+[_tb_end_text]
+
+[chara_mod  name="mizuki"  time="600"  cross="true"  storage="chara/1/mzk_mesorashi_sekimen.png"  ]
+[tb_start_text mode=1 ]
 #瑞希
 「…………」[p]
+#
+[_tb_end_text]
+
+[tb_start_text mode=1 ]
 #類
 「演出の話とか装置の設計の話とか、マニアックな話もたくさんしてしまったけれど、聞いてくれてありがとう」[p]
 #
@@ -209,7 +220,6 @@
 [_tb_end_text]
 
 [chara_mod  name="rui"  time="600"  cross="true"  storage="chara/2/rui_aseri.png"  ]
-[chara_mod  name="mizuki"  time="600"  cross="true"  storage="chara/1/mzk_akire.png"  ]
 [tb_start_text mode=1 ]
 #瑞希
 「……もう来ないのかと思ったじゃん」[p]
@@ -225,7 +235,6 @@
 #
 [_tb_end_text]
 
-[chara_mod  name="mizuki"  time="600"  cross="true"  storage="chara/1/mzk_komari.png"  ]
 [chara_mod  name="rui"  time="600"  cross="true"  storage="chara/2/rui_smile.png"  ]
 [tb_start_text mode=1 ]
 #類
@@ -257,7 +266,7 @@
 
 [chara_hide_all  time="1000"  wait="true"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
-[playbgm  volume="20"  time="1000"  loop="true"  storage="BGM/hoshinomatataki.mp3"  ]
+[playbgm  volume="100"  time="1000"  loop="true"  storage="BGM/endrole.mp3"  ]
 [tb_eval  exp="sf.skip_flag+=1"  name="skip_flag"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
 [bg  time="2000"  method="crossfade"  storage="credit.png"  ]
 [wait  time="3000"  ]

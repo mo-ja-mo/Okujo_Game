@@ -2,10 +2,10 @@
 
 *prologue_start
 
-[cm  ]
-[playbgm  volume="100"  time="1000"  loop="true"  storage="BGM/Prologue.mp3"  ]
 [tb_ptext_hide  time="1000"  ]
+[cm  ]
 [bg  storage="room.jpg"  time="1000"  ]
+[playbgm  volume="100"  time="1000"  loop="true"  storage="BGM/Prologue.mp3"  ]
 [tb_ptext_show  x="354.9875183105469"  y="219.00001525878906"  size="50"  color="0xded3d7"  time="2000"  text="Prologue"  anim="false"  face="cursive"  edge="undefined"  shadow="0x140e0e"  ]
 [tb_hide_message_window  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
@@ -17,6 +17,10 @@
 一日中貼りつく視線が不快で、学校ではショーの構想を考えたり、装置を組み立てたりと、僕は自分の世界に逃避するようになった。[p]
 周囲の雑音をシャットアウトして目の前の作業に没頭していれば、不快な出来事を忘れることができたから。[p]
 [_tb_end_text]
+
+
+;2行に表示できないため、フォント調整
+
 
 [tb_start_tyrano_code]
 [font size=23.5]
@@ -49,6 +53,10 @@
 [chara_hide  name="mizuki"  time="3000"  wait="true"  pos_mode="true"  ]
 [mask  time="1000"  effect="fadeIn"  color="0x000000"  ]
 [stopbgm  time="1000"  ]
+
+;現在友情ルートのみのためDay1にジャンプするが、CPルート開通時にはquestion.ksにジャンプするように修正
+
+
 [jump  storage="day1.ks"  target="*day1_start"  ]
 [jump  storage="question.ks"  target="*question_start"  ]
 [s  ]
