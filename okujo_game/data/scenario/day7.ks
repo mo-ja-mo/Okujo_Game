@@ -94,9 +94,10 @@
 いつもならすぐ没頭できるのに、なんだか落ち着かない。[p]
 [_tb_end_text]
 
-[playse  volume="50"  time="1000"  buf="1"  storage="climbing-the-stairs-cut.mp3"  clear="true"  ]
-[wait  time="1000"  ]
-[playse  volume="50"  time="1000"  buf="0"  storage="鉄の扉を開ける.mp3"  ]
+;足音と扉を開ける音
+[playse  volume="50"  time="1000"  buf="0"  storage="climbing-the-stairs-cut2.mp3"  clear="false"  ]
+[wait  time="2000"  ]
+[playse  volume="90"  time="1000"  buf="1"  storage="鉄の扉を開ける.mp3"  clear="true"  ]
 [tb_start_text mode=1 ]
 足音がして、瑞希くんが屋上に現れた。[p]
 [_tb_end_text]

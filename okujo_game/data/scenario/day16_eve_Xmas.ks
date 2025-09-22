@@ -38,10 +38,14 @@
 扉の近くに座って足音に注意していると、階段を上ってくる足音が聞こえた。[p]
 [_tb_end_text]
 
+
+;足音と扉を開ける音
+
+
+[playse  volume="50"  time="1000"  buf="0"  storage="climbing-the-stairs-cut2.mp3"  clear="false"  ]
+[wait  time="2000"  ]
+[playse  volume="90"  time="1000"  buf="1"  storage="鉄の扉を開ける.mp3"  clear="true"  ]
 [chara_show  name="mizuki"  time="1000"  wait="true"  storage="chara/1/base.png"  width="365"  height="865"  left="320"  top="70"  reflect="false"  ]
-[playse  volume="50"  time="1000"  buf="1"  storage="climbing-the-stairs-cut.mp3"  clear="true"  ]
-[wait  time="1000"  ]
-[playse  volume="50"  time="1000"  buf="0"  storage="鉄の扉を開ける.mp3"  ]
 [tb_start_text mode=1 ]
 #類
 「メリークリスマス！」[p]

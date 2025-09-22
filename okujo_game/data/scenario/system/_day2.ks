@@ -3,6 +3,7 @@
 [preload  storage="./data/fgimage/chara/1/mzk_komari.png"  ]
 [preload  storage="./data/fgimage/chara/2/rui_takurami.png"  ]
 [preload  storage="./data/fgimage/chara/1/mzk_mouthopen.png"  ]
+[preload  storage="./data/fgimage/chara/1/mzk_aseri_aozame.png"  ]
 [preload  storage="./data/fgimage/chara/1/mzk_akire.png"  ]
 [preload  storage="./data/fgimage/chara/1/mzk_smile.png"  ]
 [preload  storage="./data/fgimage/chara/2/rui_wink.png"  ]
