@@ -154,6 +154,15 @@ button:hover {
     margin: 5px;
 }
 
+.update a{
+    font-size: 12px;
+    color: rgb(88, 88, 88);
+    text-decoration: none;
+    margin: 3px;
+    text-align: center;
+    display: block;
+}
+
 footer {
     text-align: center;
     font-size: 20px;
@@ -215,6 +224,18 @@ footer a:visited {
     display: block;
     position: relative;
     margin: 20px auto;
+}
+
+.movie {
+    width: 65vw;
+    max-width: 800px;
+    height: calc(60vw * 9 / 16);
+    display: block;
+    position: relative;
+    margin: 20px auto;
+    border: solid 2px darkcyan;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .section {
