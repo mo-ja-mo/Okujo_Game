@@ -13,7 +13,11 @@
 [_tb_end_tyrano_code]
 
 [cm  ]
-[tb_eval  exp="f.likability+=10"  name="likability"  cmd="+="  op="t"  val="10"  val_2="undefined"  ]
+
+;デバックコード（↓の行で判定基準以上の数字を足せば好感度高モードの動作確認ができます）
+
+
+[tb_eval  exp="f.likability+=0"  name="likability"  cmd="+="  op="t"  val="0"  val_2="undefined"  ]
 [bg  storage="room.jpg"  time="1000"  ]
 [tb_ptext_show  x="386.9999694824219"  y="218.00001525878906"  size="50"  color="0xded3d7"  time="2000"  text="Day&nbsp;8"  anim="false"  face="cursive"  edge="undefined"  shadow="0x140e0e"  ]
 [wait  time="1000"  ]
@@ -53,6 +57,8 @@
 チャイムの音が鳴っても、瑞希くんは目を覚まさなかった。[p]
 #類
 （……この大音響でも起きないなんて、よっぽど疲れているのか、それとも寝不足だろうか）[p]
+（でも今日の四時間目にテストがあるって、先週瑞希くんが言っていたな……）[p]
+（気持ちよさそうに眠っているし、起こすのはお節介だろうか）[p]
 #
 [_tb_end_text]
 
@@ -64,11 +70,12 @@
 
 [tb_eval  exp="f.likability+=1"  name="likability"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
 [bg  time="1000"  method="crossfade"  storage="okujyo_normal.png"  ]
+[stopse  time="1000"  buf="0"  ]
 [chara_show  name="mizuki"  time="1000"  wait="true"  storage="chara/1/mzk_eyeclose.png"  width="365"  height="865"  left="320"  top="70"  ]
 [tb_show_message_window  ]
 [tb_start_text mode=1 ]
 #類
-（気持ちよさそうに眠っているな。起こすのはかわいそうな気がしてしまうな）[p]
+（やっぱり起こすのはかわいそうな気がしてしまうな）[p]
 #
 [_tb_end_text]
 
@@ -84,10 +91,6 @@
 僕は風上側の隣に座って、なるべく瑞希くんに風があたらないようにした。[p]
 [_tb_end_text]
 
-[tb_hide_message_window  ]
-[chara_hide_all  time="1000"  wait="true"  ]
-[stopse  time="1000"  buf="0"  ]
-[tb_hide_message_window  ]
 [jump  storage="day8_eve_sleeping.ks"  target="*day_end"  ]
 *起こす
 
@@ -96,13 +99,6 @@
 [stopse  time="1000"  buf="0"  ]
 [chara_show  name="mizuki"  time="1000"  wait="true"  storage="chara/1/mzk_eyeclose.png"  width="365"  height="865"  left="320"  top="70"  ]
 [tb_show_message_window  ]
-[tb_start_text mode=1 ]
-#類
-（そういえば今日の四時間目にテストがあるって、先週瑞希くんが言っていたけれど、大丈夫かな）[p]
-（起こした方がいいだろうか）[p]
-#
-[_tb_end_text]
-
 [chara_move  name="mizuki"  anim="false"  time="300"  effect="linear"  wait="true"  left="510"  top="70"  width="365"  height="865"  ]
 [chara_show  name="rui"  time="1000"  wait="true"  storage="chara/2/rui_normal.png"  width="400"  height="950"  left="150"  top="0"  reflect="false"  ]
 [tb_start_text mode=1 ]
@@ -123,7 +119,7 @@
 [tb_show_message_window  ]
 [tb_start_text mode=1 ]
 #類
-（よく眠っているし、起こすのは忍びないな）[p]
+（やっぱり、起こすのは忍びないな）[p]
 #
 [_tb_end_text]
 

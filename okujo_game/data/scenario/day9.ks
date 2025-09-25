@@ -13,6 +13,10 @@
 [_tb_end_tyrano_code]
 
 [cm  ]
+
+;デバックコード（↓の行で判定基準以上の数字を足せば好感度高モードの動作確認ができます）
+
+
 [tb_eval  exp="f.likability+=0"  name="likability"  cmd="+="  op="t"  val="0"  ]
 [bg  storage="room.jpg"  time="1000"  ]
 [tb_ptext_show  x="386.9999694824219"  y="218.00001525878906"  size="50"  color="0xded3d7"  time="2000"  text="Day&nbsp;9"  anim="false"  face="cursive"  edge="undefined"  shadow="0x140e0e"  ]
@@ -48,7 +52,7 @@
 
 [tb_eval  exp="f.likability+=1"  name="likability"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
 [tb_show_message_window  ]
-[jump  storage="day9.ks"  target="*様子を見る_好感度高"  cond="f.likability>9"  ]
+[jump  storage="day9.ks"  target="*様子を見る_好感度高"  cond="f.likability>12"  ]
 [tb_start_text mode=1 ]
 瑞希くんは浮かない顔で膝を抱えている。[p]
 強張った表情でこちらに背を向けている様子は、明らかに僕の干渉を拒んでいるように見えた。[p]
@@ -96,7 +100,7 @@
 
 [_tb_end_text]
 
-[jump  storage="day9.ks"  target="*雑談_好感度高"  cond="f.likability>9"  ]
+[jump  storage="day9.ks"  target="*雑談_好感度高"  cond="f.likability>12"  ]
 [tb_start_text mode=1 ]
 瑞希くんは煩わしそうな顔をして、僕からは死角になる塔屋の裏側に移動してしまった。[p]
 [_tb_end_text]
@@ -106,7 +110,7 @@
 *雑談_好感度高
 
 [tb_start_text mode=1 ]
-瑞希くんは上の空のようだったが、午前中いっぱい僕の近くで膝を抱えていた。[p]
+瑞希くんは上の空のようだったが、立ち去ろうとはせずに僕の近くで膝を抱えていた。[p]
 [_tb_end_text]
 
 [jump  storage="day9.ks"  target="*day_end"  ]
@@ -126,7 +130,7 @@
 
 [chara_move  name="rui"  anim="false"  time="300"  effect="linear"  wait="true"  left="150"  top="0"  width="400"  height="950"  ]
 [chara_show  name="mizuki"  time="1000"  wait="true"  storage="chara/1/mzk_normal.png"  width="365"  height="865"  left="510"  top="70"  reflect="false"  ]
-[jump  storage="day9.ks"  target="*サプライズ_好感度高"  cond="f.likability>9"  ]
+[jump  storage="day9.ks"  target="*サプライズ_好感度高"  cond="f.likability>12"  ]
 [tb_start_text mode=1 ]
 #瑞希
 「今はいい……」[p]
@@ -159,7 +163,7 @@
 
 [chara_move  name="rui"  anim="false"  time="300"  effect="linear"  wait="true"  left="150"  top="0"  width="400"  height="950"  ]
 [chara_show  name="mizuki"  time="1000"  wait="true"  storage="chara/1/mzk_normal.png"  width="365"  height="865"  left="510"  top="70"  reflect="false"  ]
-[jump  storage="day9.ks"  target="*作業をする_好感度高"  cond="f.likability>9"  ]
+[jump  storage="day9.ks"  target="*作業をする_好感度高"  cond="f.likability>12"  ]
 [tb_start_text mode=1 ]
 瑞希くんは膝を抱えたままぼんやりしている。[p]
 [_tb_end_text]

@@ -5,4 +5,5 @@
 [preload  storage="./data/bgimage/odoriba.png"  ]
 [preload  storage="./data/fgimage/chara/1/mzk_mouthopen.png"  ]
 [preload  storage="./data/bgimage/okujo_rainy.png"  ]
+[preload  storage="./data/bgimage/bg_black.png"  ]
 [return]

@@ -2,4 +2,5 @@
 [preload  storage="./data/bgimage/libraty_cloudy.jpg"  ]
 [preload  storage="./data/bgimage/odoriba.png"  ]
 [preload  storage="./data/fgimage/chara/2/rui_smile.png"  ]
+[preload  storage="./data/fgimage/chara/1/mzk_mesorashi_sekimen.png"  ]
 [return]

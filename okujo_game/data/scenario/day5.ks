@@ -12,6 +12,10 @@
 [endif]
 [_tb_end_tyrano_code]
 
+
+;デバックコード（↓の行で判定基準以上の数字を足せば好感度高モードの動作確認ができます）
+
+
 [tb_eval  exp="f.likability+=0"  name="likability"  cmd="+="  op="t"  val="0"  val_2="undefined"  ]
 [cm  ]
 [bg  storage="room.jpg"  time="1000"  ]
@@ -68,7 +72,7 @@
 #
 [_tb_end_text]
 
-[jump  storage="day5.ks"  target="*様子を見る_好感度高"  cond="f.likability>5"  ]
+[jump  storage="day5.ks"  target="*様子を見る_好感度高"  cond="f.likability>6"  ]
 [tb_start_text mode=1 ]
 結局、そわそわしながら見守ることしかできなかった。[p]
 [_tb_end_text]
@@ -111,7 +115,7 @@
 
 [chara_move  name="mizuki"  anim="false"  time="300"  effect="linear"  wait="true"  left="510"  top="70"  width="365"  height="865"  ]
 [chara_show  name="rui"  time="1000"  wait="true"  storage="chara/2/rui_normal.png"  width="400"  height="950"  left="150"  top="0"  reflect="false"  ]
-[tb_eval  exp="f.likability+=1"  name="likability"  cmd="+="  op="t"  val="1"  ]
+[tb_eval  exp="f.likability+=2"  name="likability"  cmd="+="  op="t"  val="2"  val_2="undefined"  ]
 [tb_show_message_window  ]
 [tb_start_text mode=1 ]
 #類
@@ -125,7 +129,7 @@
 #
 [_tb_end_text]
 
-[jump  storage="day5.ks"  target="*雑談_好感度高"  cond="f.likability>5"  ]
+[jump  storage="day5.ks"  target="*雑談_好感度高"  cond="f.likability>6"  ]
 [tb_start_text mode=1 ]
 瑞希くんは思ったより興味深そうに話を聞いてくれた。[p]
 僕の話につられるように、時折空を見上げてじっと雲を見つめている。[p]
@@ -178,7 +182,7 @@
 いったん手を握ってから、ぱっと開くと僕の手のひらには飴玉が１つ乗っている。簡単な手品だ。[p]
 [_tb_end_text]
 
-[jump  storage="day5.ks"  target="*サプライズ_好感度高"  cond="f.likability>5"  ]
+[jump  storage="day5.ks"  target="*サプライズ_好感度高"  cond="f.likability>6"  ]
 [tb_start_text mode=1 ]
 #瑞希
 「先輩って手品もできるんだ？」[p]

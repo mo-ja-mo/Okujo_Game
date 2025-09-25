@@ -13,6 +13,10 @@
 [_tb_end_tyrano_code]
 
 [cm  ]
+
+;デバックコード（↓の行で判定基準以上の数字を足せば好感度高モードの動作確認ができます）
+
+
 [tb_eval  exp="f.likability+=0"  name="likability"  cmd="+="  op="t"  val="0"  ]
 [bg  storage="room_cloudy.jpg"  time="1000"  ]
 [tb_ptext_show  x="386.9999694824219"  y="218.00001525878906"  size="50"  color="0xded3d7"  time="2000"  text="Day&nbsp;15"  anim="false"  face="cursive"  edge="undefined"  shadow="0x140e0e"  ]
@@ -87,7 +91,6 @@
 [s  ]
 *図書室にでも行くかい？
 
-[tb_eval  exp="f.likability+=1"  name="likability"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
 [tb_show_message_window  ]
 [tb_start_text mode=1 ]
 #類
@@ -95,7 +98,7 @@
 #
 [_tb_end_text]
 
-[jump  storage="day15.ks"  target="*図書館に行くかい_好感度高"  cond="f.likability>18"  ]
+[jump  storage="day15.ks"  target="*図書館に行くかい_好感度高"  cond="f.likability>21"  ]
 [tb_start_text mode=1 ]
 #瑞希
 「ボクはここにいるよ。先輩は図書室に行ったら？」[p]
@@ -118,7 +121,7 @@
 [s  ]
 *ここで過ごすのもいいね
 
-[tb_eval  exp="f.likability+=2"  name="likability"  cmd="+="  op="t"  val="2"  val_2="undefined"  ]
+[tb_eval  exp="f.likability+=1"  name="likability"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
 [tb_show_message_window  ]
 [tb_start_text mode=1 ]
 #類
@@ -136,7 +139,7 @@
 #
 [_tb_end_text]
 
-[jump  storage="day15.ks"  target="*ここで過ごすのもいいね_好感度高"  cond="f.likability>18"  ]
+[jump  storage="day15.ks"  target="*ここで過ごすのもいいね_好感度高"  cond="f.likability>21"  ]
 [tb_start_text mode=1 ]
 #瑞希
 「…まぁ、たふん？」[p]
@@ -146,6 +149,7 @@
 [jump  storage="day15.ks"  target="*day_end"  ]
 *ここで過ごすのもいいね_好感度高
 
+[chara_mod  name="mizuki"  time="600"  cross="true"  storage="chara/1/mzk_mesorashi_sekimen.png"  ]
 [tb_start_text mode=1 ]
 #瑞希
 「まぁ、来ると思うけど……」[p]

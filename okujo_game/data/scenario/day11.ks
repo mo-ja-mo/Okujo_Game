@@ -13,7 +13,11 @@
 [_tb_end_tyrano_code]
 
 [cm  ]
-[tb_eval  exp="f.likability+=0"  name="likability"  cmd="+="  op="t"  val="0"  val_2="undefined"  ]
+
+;デバックコード（↓の行で判定基準以上の数字を足せば好感度高モードの動作確認ができます）
+
+
+[tb_eval  exp="f.likability+=0"  name="likability"  cmd="+="  op="t"  val="0"  ]
 [bg  storage="room_cloudy.jpg"  time="1000"  ]
 [tb_ptext_show  x="386.9999694824219"  y="218.00001525878906"  size="50"  color="0xded3d7"  time="2000"  text="Day&nbsp;11"  anim="false"  face="cursive"  edge="undefined"  shadow="0x140e0e"  ]
 [wait  time="1000"  ]
@@ -50,7 +54,7 @@
 [_tb_end_text]
 
 [chara_mod  name="mizuki"  time="600"  cross="true"  storage="chara/1/mzk_akire_aozame.png"  ]
-[jump  storage="day11.ks"  target="*様子を見る_好感度高"  cond="f.likability>12"  ]
+[jump  storage="day11.ks"  target="*様子を見る_好感度高"  cond="f.likability>14"  ]
 [tb_start_text mode=1 ]
 瑞希くんは寒そうに膝を抱えている。[p]
 [_tb_end_text]
@@ -93,7 +97,7 @@
 #
 [_tb_end_text]
 
-[jump  storage="day11.ks"  target="*中に入る_好感度高"  cond="f.likability>13"  ]
+[jump  storage="day11.ks"  target="*中に入る_好感度高"  cond="f.likability>14"  ]
 [tb_start_text mode=1 ]
 #瑞希
 熱心に誘うと、瑞希くんは根負けしたのか小さく頷いてくれた。[p]
@@ -145,7 +149,7 @@
 #
 [_tb_end_text]
 
-[jump  storage="day11.ks"  target="*防寒_好感度高"  cond="f.likability>13"  ]
+[jump  storage="day11.ks"  target="*防寒_好感度高"  cond="f.likability>14"  ]
 [tb_start_text mode=1 ]
 #瑞希
 「……大丈夫だよ」[p]
@@ -177,7 +181,7 @@
 僕は小型ロボットの製作を進めることにした。[p]
 [_tb_end_text]
 
-[jump  storage="day11.ks"  target="*作業をする_好感度高"  cond="f.likability>12"  ]
+[jump  storage="day11.ks"  target="*作業をする_好感度高"  cond="f.likability>14"  ]
 [tb_start_text mode=1 ]
 気がつくと瑞希くんは屋上にいなかった。[p]
 屋内に避難してしまったらしい。[p]
@@ -213,13 +217,18 @@
 [tb_hide_message_window  ]
 [tb_ptext_hide  time="1000"  ]
 [chara_hide_all  time="1000"  wait="true"  ]
+[bg  time="1000"  method="crossfade"  storage="bg_black.png"  ]
 [tb_show_message_window  ]
 [tb_start_text mode=1 ]
 翌日、瑞希くんは学校に来なかった。[p]
 [_tb_end_text]
 
 [tb_hide_message_window  ]
-[tb_image_hide  time="1000"  ]
+[mask  time="1000"  effect="fadeIn"  color="0x000000"  ]
+[tb_start_tyrano_code]
+[freeimage layer="base"]
+[_tb_end_tyrano_code]
+
 [jump  storage="day12_eve_test.ks"  target="*day12_start"  ]
 [s  ]
 *day_end

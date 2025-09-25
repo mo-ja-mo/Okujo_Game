@@ -13,6 +13,11 @@
 [_tb_end_tyrano_code]
 
 [cm  ]
+
+;デバックコード（↓の行で判定基準以上の数字を足せば好感度高モードの動作確認ができます）
+
+
+[tb_eval  exp="f.likability+=0"  name="likability"  cmd="+="  op="t"  val="0"  val_2="undefined"  ]
 [bg  storage="room.jpg"  time="1000"  ]
 [tb_ptext_show  x="386.9999694824219"  y="218.00001525878906"  size="50"  color="0xded3d7"  time="2000"  text="Day&nbsp;17"  anim="false"  face="cursive"  edge="undefined"  shadow="0x140e0e"  ]
 [wait  time="1000"  ]
@@ -52,13 +57,17 @@
 #
 [_tb_end_text]
 
-[chara_mod  name="mizuki"  time="600"  cross="true"  storage="chara/1/mzk_mouthopen.png"  ]
+[chara_mod  name="mizuki"  time="600"  cross="true"  storage="chara/1/mzk_mesorashi.png"  ]
 [tb_start_text mode=1 ]
 #類
 （瑞希くんとは最近は毎日のように屋上で一緒に過ごしていたけれど、今日から新学期まではしばらく会えない。今日伝えておかないと）[p]
 [_tb_end_text]
 
-[jump  storage="day17_syugyousiki.ks"  target="*Normal_End分岐"  cond="f.likability>20"  ]
+
+;END分岐。好感度が設定値以下なら「感謝を伝える」の選択肢しか出ない。好感度が設定値以上なら「初詣に誘う」「感謝を伝える」の選択肢が出る。感謝を伝える→ノーマルエンド
+
+
+[jump  storage="day17_syugyousiki.ks"  target="*Normal_End分岐"  cond="f.likability<23"  ]
 [tb_hide_message_window  ]
 [glink  color="btn_02_black"  storage="day17_syugyousiki.ks"  size="20"  text="初詣に誘う"  target="*初詣に誘う"  x="250"  y="450"  width="200"  height=""  _clickable_img=""  ]
 [glink  color="btn_02_black"  storage="day17_syugyousiki.ks"  size="20"  target="*NormalEnd"  text="感謝を伝える"  autopos="false"  x="550"  y="450"  width="200"  height=""  _clickable_img=""  ]
@@ -92,12 +101,16 @@
 「まぁ、節目の年ではあるからね」[p]
 （本当は初詣なんて小学生の頃に家族で行ったきりだし、何通りも検討した中で一番自然に誘えそうだったというだけだけれど）[p]
 （でも瑞希くんは、僕がイベントごとが好きだから誘ったのだと納得してくれたようだ）[p]
+#
+[_tb_end_text]
+
+[chara_mod  name="mizuki"  time="600"  cross="true"  storage="chara/1/mzk_komari.png"  ]
+[tb_start_text mode=1 ]
 #瑞希
 「まさか先輩……紋付き袴で来たりしないよね？」[p]
 #
 [_tb_end_text]
 
-[chara_mod  name="mizuki"  time="600"  cross="true"  storage="chara/1/mzk_komari.png"  ]
 [chara_mod  name="rui"  time="600"  cross="true"  storage="chara/2/rui_aseri.png"  ]
 [tb_start_text mode=1 ]
 #類
@@ -126,13 +139,17 @@
 僕の勢いに、瑞希くんはびっくりしたように目を瞬いた。[p]
 #類
 （しまった。断られるだろうと思っていたから、つい興奮して……）[p]
+#
+[_tb_end_text]
+
+[chara_mod  name="mizuki"  time="600"  cross="true"  storage="chara/1/mzk_mesorashi_sekimen.png"  ]
+[tb_start_text mode=1 ]
 #瑞希
 「あ、うん。……先輩となら、楽しそうだし」[p]
 #
 ぼそぼそと言った瑞希くんの声は、最後の方がよく聞き取れなかった。[p]
 [_tb_end_text]
 
-[chara_mod  name="mizuki"  time="600"  cross="true"  storage="chara/1/mzk_mesorashi_sekimen.png"  ]
 [tb_start_text mode=1 ]
 #類
 （楽しそうって……言ってくれたのかな……？）[p]

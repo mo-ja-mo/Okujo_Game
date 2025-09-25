@@ -13,6 +13,10 @@
 [_tb_end_tyrano_code]
 
 [cm  ]
+
+;デバックコード（↓の行で判定基準以上の数字を足せば好感度高モードの動作確認ができます）
+
+
 [tb_eval  exp="f.likability+=0"  name="likability"  cmd="+="  op="t"  val="0"  ]
 [bg  time="1000"  method="crossfade"  storage="nc218070_【手描き背景】駅の改札.png"  ]
 [tb_ptext_show  x="386.9999694824219"  y="218.00001525878906"  size="50"  color="0x000000"  time="2000"  text="１月５日"  anim="false"  face="fantasy"  edge="undefined"  shadow="0x140e0e"  ]
@@ -686,7 +690,6 @@
 [playbgm  volume="100"  time="1000"  loop="true"  storage="BGM/endrole.mp3"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [bg  time="2000"  method="crossfade"  storage="credit.png"  ]
-[tb_eval  exp="sf.skip_flag+=1"  name="skip_flag"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
 [l  ]
 [bg  time="1000"  method="crossfade"  storage="bg_black.png"  ]
 [tb_ptext_show  x="305"  y="280.00001525878906"  size="30"  color="0xffffff"  time="3000"  text="友情ルート：Good&nbsp;End"  face="sans-serif,'メイリオ'"  anim="false"  edge="undefined"  shadow="undefined"  ]
@@ -856,7 +859,6 @@
 [stopbgm  time="1000"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [movie  volume="80"  storage="end_roll.mp4"  ]
-[tb_eval  exp="sf.skip_flag+=1"  name="skip_flag"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
 [l  ]
 [bg  time="1000"  method="crossfade"  storage="bg_black.png"  ]
 [tb_ptext_show  x="305"  y="280.00001525878906"  size="30"  color="0xffffff"  time="3000"  text="友情ルート：True&nbsp;End"  face="sans-serif,'メイリオ'"  anim="false"  edge="undefined"  shadow="undefined"  ]

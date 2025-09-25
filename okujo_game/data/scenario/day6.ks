@@ -13,6 +13,10 @@
 [_tb_end_tyrano_code]
 
 [cm  ]
+
+;デバックコード（↓の行で判定基準以上の数字を足せば好感度高モードの動作確認ができます）
+
+
 [tb_eval  exp="f.likability+=0"  name="likability"  cmd="+="  op="t"  val="0"  ]
 [bg  storage="room.jpg"  time="1000"  ]
 [tb_ptext_show  x="386.9999694824219"  y="218.00001525878906"  size="50"  color="0xded3d7"  time="2000"  text="Day&nbsp;6"  anim="false"  face="cursive"  edge="undefined"  shadow="0x140e0e"  ]
@@ -31,7 +35,10 @@
 と、そこに階段を上る足音が聞こえた。[p]
 [_tb_end_text]
 
+
 ;足音と扉を開ける音
+
+
 [playse  volume="50"  time="1000"  buf="0"  storage="climbing-the-stairs-cut2.mp3"  clear="false"  ]
 [wait  time="2000"  ]
 [playse  volume="90"  time="1000"  buf="1"  storage="鉄の扉を開ける.mp3"  clear="true"  ]
@@ -54,7 +61,7 @@
 
 [tb_eval  exp="f.likability+=1"  name="likability"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
 [tb_show_message_window  ]
-[jump  storage="day6.ks"  target="*様子を見る_好感度高"  cond="f.likability>6"  ]
+[jump  storage="day6.ks"  target="*様子を見る_好感度高"  cond="f.likability>8"  ]
 [tb_start_text mode=1 ]
 瑞希くんは欠伸をした。[p]
 しばらくして瑞希くんは僕から見えない塔屋の裏側に移動してしまった。[p]
@@ -84,7 +91,7 @@
 
 [chara_move  name="mizuki"  anim="false"  time="300"  effect="linear"  wait="true"  left="510"  top="70"  width="365"  height="865"  ]
 [chara_show  name="rui"  time="1000"  wait="true"  storage="chara/2/rui_normal.png"  width="400"  height="950"  left="150"  top="0"  reflect="false"  ]
-[tb_eval  exp="f.likability+=1"  name="likability"  cmd="+="  op="t"  val="1"  ]
+[tb_eval  exp="f.likability+=2"  name="likability"  cmd="+="  op="t"  val="2"  val_2="undefined"  ]
 [tb_show_message_window  ]
 [tb_start_text mode=1 ]
 #類
@@ -100,7 +107,7 @@
 [_tb_end_text]
 
 [chara_mod  name="mizuki"  time="600"  cross="true"  storage="chara/1/mzk_seme.png"  ]
-[jump  storage="day6.ks"  target="*雑談_好感度高"  cond="f.likability>6"  ]
+[jump  storage="day6.ks"  target="*雑談_好感度高"  cond="f.likability>8"  ]
 [tb_start_text mode=1 ]
 話しているうちについ夢中になって、気が付いたら月食をモチーフにした戯曲について、だいぶ長く話してしまった。[p]
 #類
@@ -189,7 +196,7 @@
 #
 [_tb_end_text]
 
-[jump  storage="day6.ks"  target="*サプライズ_好感度高"  cond="f.likability>5"  ]
+[jump  storage="day6.ks"  target="*サプライズ_好感度高"  cond="f.likability>8"  ]
 [tb_start_text mode=1 ]
 #瑞希
 「うん、ありがとう」[p]
@@ -246,7 +253,7 @@
 [chara_move  name="rui"  anim="false"  time="300"  effect="linear"  wait="true"  left="150"  top="0"  width="400"  height="950"  ]
 [chara_mod  name="rui"  time="600"  cross="true"  storage="chara/2/rui_takurami.png"  ]
 [chara_show  name="mizuki"  time="1000"  wait="true"  storage="chara/1/mzk_normal.png"  width="365"  height="865"  left="510"  top="70"  reflect="false"  ]
-[jump  storage="day6.ks"  target="*作業をする_好感度高"  cond="f.likability>6"  ]
+[jump  storage="day6.ks"  target="*作業をする_好感度高"  cond="f.likability>8"  ]
 [tb_start_text mode=1 ]
 瑞希くんは僕が何をしているのか気になるようだ。[p]
 何か言いたげに口を開き書けたが、結局何も言わなかった。[p]

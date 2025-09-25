@@ -13,7 +13,11 @@
 [_tb_end_tyrano_code]
 
 [cm  ]
-[tb_eval  exp="f.likability+=5"  name="likability"  cmd="+="  op="t"  val="5"  val_2="undefined"  ]
+
+;デバックコード（↓の行で判定基準以上の数字を足せば好感度高モードの動作確認ができます）
+
+
+[tb_eval  exp="f.likability+=0"  name="likability"  cmd="+="  op="t"  val="0"  ]
 [bg  storage="room.jpg"  time="1000"  ]
 [tb_ptext_show  x="386.9999694824219"  y="218.00001525878906"  size="50"  color="0xded3d7"  time="2000"  text="Day&nbsp;13"  anim="false"  face="cursive"  edge="undefined"  shadow="0x140e0e"  ]
 [wait  time="1000"  ]
@@ -69,7 +73,7 @@
 
 [tb_eval  exp="f.likability+=1"  name="likability"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
 [tb_show_message_window  ]
-[jump  storage="day13.ks"  target="*様子を見る_好感度高"  cond="f.likability>15"  ]
+[jump  storage="day13.ks"  target="*様子を見る_好感度高"  cond="f.likability>17"  ]
 [tb_start_text mode=1 ]
 瑞希くんはなんとか口元を引き締めようとしているように見えた。[p]
 #類
@@ -80,6 +84,8 @@
 [jump  storage="day13.ks"  target="*day_end"  ]
 *様子を見る_好感度高
 
+[chara_move  name="mizuki"  anim="false"  time="300"  effect="linear"  wait="true"  left="510"  top="70"  width="365"  height="865"  ]
+[chara_show  name="rui"  time="1000"  wait="true"  storage="chara/2/rui_normal.png"  width="400"  height="950"  left="150"  top="0"  reflect="false"  ]
 [tb_start_text mode=1 ]
 #類
 「いいことでもあったのかい？」[p]
@@ -95,6 +101,7 @@
 瑞希くんはお勧めの曲をいくつか教えてくれた。[p]
 [_tb_end_text]
 
+[chara_mod  name="rui"  time="600"  cross="true"  storage="chara/2/rui_smile.png"  ]
 [tb_start_text mode=1 ]
 #類
 （学校の友人にお薦めのものを教えてもらったのは初めてだな……）[p]
@@ -106,7 +113,7 @@
 
 [chara_move  name="mizuki"  anim="false"  time="300"  effect="linear"  wait="true"  left="510"  top="70"  width="365"  height="865"  ]
 [chara_show  name="rui"  time="1000"  wait="true"  storage="chara/2/rui_normal.png"  width="400"  height="950"  left="150"  top="0"  reflect="false"  ]
-[tb_eval  exp="f.likability+=1"  name="likability"  cmd="+="  op="t"  val="1"  ]
+[tb_eval  exp="f.likability+=2"  name="likability"  cmd="+="  op="t"  val="2"  val_2="undefined"  ]
 [tb_show_message_window  ]
 [tb_start_text mode=1 ]
 僕らはいつものように並んで座った。[p]
@@ -120,7 +127,7 @@
 [_tb_end_text]
 
 [chara_mod  name="mizuki"  time="600"  cross="true"  storage="chara/1/mzk_smile.png"  ]
-[jump  storage="day13.ks"  target="*雑談_好感度高"  cond="f.likability>15"  ]
+[jump  storage="day13.ks"  target="*雑談_好感度高"  cond="f.likability>17"  ]
 [tb_start_text mode=1 ]
 #瑞希
 「先輩らしいね」[p]
@@ -166,7 +173,7 @@
 瑞希くんはそう言っただけだったけれど、じっと猫の風船を見つめる口元は少し緩んでいる。[p]
 [_tb_end_text]
 
-[jump  storage="day13.ks"  target="*サプライズ_好感度高"  cond="f.likability>15"  ]
+[jump  storage="day13.ks"  target="*サプライズ_好感度高"  cond="f.likability>17"  ]
 [tb_start_text mode=1 ]
 #瑞希
 「……かわいい」[p]
@@ -176,6 +183,12 @@
 [jump  storage="day13.ks"  target="*day_end"  ]
 [s  ]
 *サプライズ_好感度高
+
+[tb_start_text mode=1 ]
+#瑞希
+「……かわいい」[p]
+#
+[_tb_end_text]
 
 [chara_mod  name="mizuki"  time="600"  cross="true"  storage="chara/1/mzk_smile.png"  ]
 [tb_start_text mode=1 ]
@@ -198,7 +211,7 @@
 
 [chara_move  name="rui"  anim="false"  time="300"  effect="linear"  wait="true"  left="150"  top="0"  width="400"  height="950"  ]
 [chara_show  name="mizuki"  time="1000"  wait="true"  storage="chara/1/mzk_normal.png"  width="365"  height="865"  left="510"  top="70"  reflect="false"  ]
-[jump  storage="day13.ks"  target="*作業をする_好感度高"  cond="f.likability>15"  ]
+[jump  storage="day13.ks"  target="*作業をする_好感度高"  cond="f.likability>17"  ]
 [tb_start_text mode=1 ]
 #瑞希
 「それって新しく作るロボット？」[p]

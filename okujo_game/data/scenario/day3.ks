@@ -13,6 +13,10 @@
 [_tb_end_tyrano_code]
 
 [cm  ]
+
+;デバックコード（↓の行で判定基準以上の数字を足せば好感度高モードの動作確認ができます）
+
+
 [tb_eval  exp="f.likability+=0"  name="likability"  cmd="+="  op="t"  val="0"  val_2="undefined"  ]
 [bg  storage="room_cloudy.jpg"  time="1000"  ]
 [tb_ptext_show  x="386.9999694824219"  y="218.00001525878906"  size="50"  color="0xded3d7"  time="2000"  text="Day&nbsp;3"  anim="false"  face="cursive"  edge="undefined"  shadow="0x140e0e"  ]
@@ -87,7 +91,7 @@
 [s  ]
 *手を伸ばす
 
-[tb_eval  exp="f.likability+=1"  name="likability"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
+[tb_eval  exp="f.likability+=2"  name="likability"  cmd="+="  op="t"  val="2"  val_2="undefined"  ]
 [tb_show_message_window  ]
 [chara_hide  name="mizuki"  time="1000"  wait="true"  pos_mode="true"  ]
 [chara_move  name="rui"  anim="false"  time="300"  effect="linear"  wait="true"  width="400"  height="950"  left="280"  ]
@@ -147,21 +151,48 @@
 「え、ドローンってあの空を飛んで撮影とかするやつ！？」[p]
 #類
 「うん。今、ドローンの技術をショーに活かせないだろうかと思って、いろいろ試行錯誤しているところだから、二台くらいなら飛ばせるよ」[p]
+#瑞希
+「２台！？」[p]
 #
 [_tb_end_text]
 
 [chara_mod  name="mizuki"  time="600"  cross="true"  storage="chara/1/mzk_odoroki.png"  ]
 [tb_start_text mode=1 ]
 #瑞希
-「２台！？」[p]
+「……先輩ってやっぱり天才なんだね」[p]
 #
-瑞希くんは戸惑ったように目を瞬いた。[p]
+
 [_tb_end_text]
 
-[jump  storage="day3.ks"  target="*手を伸ばす_好感度高"  cond="f.likability>3"  ]
+[chara_mod  name="rui"  time="600"  cross="true"  storage="chara/2/rui_mesorashi.png"  ]
+[tb_start_text mode=1 ]
+#類
+「……そう、かな」[p]
+#
+[_tb_end_text]
+
+[chara_mod  name="mizuki"  time="600"  cross="true"  storage="chara/1/mzk_akire.png"  ]
 [tb_start_text mode=1 ]
 #瑞希
-「…先輩ってお人好しだね。――でも、ありがとう」[p]
+「……えっと、ごめん。もしかして言われたくなかった？」[p]
+#類
+「いや、そういうわけじゃないよ」[p]
+#
+[_tb_end_text]
+
+[chara_mod  name="rui"  time="600"  cross="true"  storage="chara/2/rui_smile.png"  ]
+[tb_start_text mode=1 ]
+#類
+（最近、あまりいい意味で言われたことがなかったから思わず身構えてしまったけれど、今の言葉はただ素直に感心しただけのように聞こえた）[p]
+（瑞希くんに気を遣わせてしまったかもしれないな）[p]
+（人の表情に敏感なのも、瑞希くんが教室に居づらい理由のひとつなのかもしれない）[p]
+#
+[_tb_end_text]
+
+[jump  storage="day3.ks"  target="*手を伸ばす_好感度高"  cond="f.likability>4"  ]
+[tb_start_text mode=1 ]
+#瑞希
+「バッジについては本当に無理しなくていいから……でも、ありがとう」[p]
 #
 [_tb_end_text]
 
@@ -171,14 +202,14 @@
 
 [tb_start_text mode=1 ]
 #瑞希
-「うん。ありがとう」[p]
+「バッジについては本当に無理しなくていいから……でも、ありがとう」[p]
 #
 [_tb_end_text]
 
 [chara_mod  name="mizuki"  time="600"  cross="true"  storage="chara/1/mzk_mesorashi.png"  ]
 [tb_start_text mode=1 ]
-#
-「制服汚れちゃったじゃん。貸して、ボクが払ってあげる」[p]
+#瑞希
+「制服汚れちゃったね。貸して、ボクが払ってあげる」[p]
 #
 [_tb_end_text]
 
@@ -260,7 +291,7 @@
 [_tb_end_text]
 
 [chara_mod  name="mizuki"  time="600"  cross="true"  storage="chara/1/mzk_smile.png"  ]
-[jump  storage="day3.ks"  target="*道具を使う_好感度高"  cond="f.likability>3"  ]
+[jump  storage="day3.ks"  target="*道具を使う_好感度高"  cond="f.likability>4"  ]
 [tb_start_text mode=1 ]
 #瑞希
 「……ありがとう」[p]

@@ -12,6 +12,10 @@
 [endif]
 [_tb_end_tyrano_code]
 
+
+;デバックコード（↓の行で判定基準以上の数字を足せば好感度高モードの動作確認ができます）
+
+
 [cm  ]
 [tb_eval  exp="f.likability+=0"  name="likability"  cmd="+="  op="t"  val="0"  ]
 [bg  storage="room.jpg"  time="1000"  ]
@@ -102,7 +106,6 @@
 #
 [_tb_end_text]
 
-[chara_mod  name="mizuki"  time="600"  cross="true"  storage="chara/1/mzk_smile.png"  ]
 [tb_start_text mode=1 ]
 #瑞希
 「……うん。ありがとう」[p]
@@ -110,6 +113,7 @@
 悪いと思ったのか瑞希くんは座ってサンタ帽をかぶってくれた。[p]
 [_tb_end_text]
 
+[chara_mod  name="mizuki"  time="600"  cross="true"  storage="chara/1/mzk_smile.png"  ]
 [playbgm  volume="80"  time="1000"  loop="true"  storage="BGM/ジングルベル〜きよしこの夜.mp3"  fadein="true"  ]
 [chara_mod  name="mizuki"  time="0"  cross="false"  storage="chara/1/base.png"  ]
 [chara_part  name="mizuki"  time="600"  santa_bou="santabou_mzk.png"  wait="true"  ]
@@ -159,6 +163,7 @@
 [chara_part  name="mizuki"  time="0"  santa_bou="none"  ]
 [chara_part  name="rui"  time="0"  santa_bou="none"  ]
 [chara_hide_all  time="0"  wait="false"  ]
+[tb_eval  exp="f.likability+=2"  name="likability"  cmd="+="  op="t"  val="2"  val_2="undefined"  ]
 [bg  time="1000"  method="crossfade"  storage="イベント/xmas.png"  ]
 [mask_off  time="0"  effect="fadeOut"  ]
 [wait  time="2000"  ]
@@ -202,7 +207,7 @@
 #
 [_tb_end_text]
 
-[jump  storage="day16_eve_Xmas.ks"  target="*Xmas_好感度高"  cond="f.likability>20"  ]
+[jump  storage="day16_eve_Xmas.ks"  target="*Xmas_好感度高"  cond="f.likability>23"  ]
 [tb_start_text mode=1 ]
 #類
 「実はデザートも用意してあるんだ。食べるかい？」[p]

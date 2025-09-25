@@ -218,7 +218,7 @@
 [s  ]
 *作業をする
 
-[tb_eval  exp="f.likability+=1"  name="likability"  cmd="+="  op="t"  val="1"  ]
+[tb_eval  exp="f.likability+=2"  name="likability"  cmd="+="  op="t"  val="2"  val_2="undefined"  ]
 [chara_hide  name="mizuki"  time="1000"  wait="true"  pos_mode="true"  ]
 [chara_show  name="rui"  time="1000"  wait="true"  storage="chara/2/rui_normal.png"  width="400"  height="950"  left="280"  top="0"  ]
 [tb_show_message_window  ]

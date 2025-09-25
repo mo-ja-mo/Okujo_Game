@@ -13,6 +13,10 @@
 [_tb_end_tyrano_code]
 
 [cm  ]
+
+;デバックコード（↓の行で判定基準以上の数字を足せば好感度高モードの動作確認ができます）
+
+
 [tb_eval  exp="f.likability+=0"  name="likability"  cmd="+="  op="t"  val="0"  val_2="undefined"  ]
 [bg  storage="room.jpg"  time="1000"  ]
 [tb_ptext_show  x="386.9999694824219"  y="218.00001525878906"  size="50"  color="0xded3d7"  time="2000"  text="Day&nbsp;7"  anim="false"  face="cursive"  edge="undefined"  shadow="0x140e0e"  ]
@@ -61,7 +65,7 @@
 #
 [_tb_end_text]
 
-[jump  storage="day7.ks"  target="*様子を見る_好感度高"  cond="f.likability>7"  ]
+[jump  storage="day7.ks"  target="*様子を見る_好感度高"  cond="f.likability>9"  ]
 [tb_start_text mode=1 ]
 #類
 （退屈だな……）[p]
@@ -87,14 +91,17 @@
 *待ってみる
 
 [chara_show  name="rui"  time="1000"  wait="true"  storage="chara/2/rui_normal.png"  width="400"  height="950"  left="280"  top="0"  reflect="false"  ]
-[tb_eval  exp="f.likability+=1"  name="likability"  cmd="+="  op="t"  val="1"  ]
+[tb_eval  exp="f.likability+=2"  name="likability"  cmd="+="  op="t"  val="2"  val_2="undefined"  ]
 [tb_show_message_window  ]
 [tb_start_text mode=1 ]
 僕は塔屋の壁に寄りかかって、持ってきた本を取り出した。[p]
 いつもならすぐ没頭できるのに、なんだか落ち着かない。[p]
 [_tb_end_text]
 
+
 ;足音と扉を開ける音
+
+
 [playse  volume="50"  time="1000"  buf="0"  storage="climbing-the-stairs-cut2.mp3"  clear="false"  ]
 [wait  time="2000"  ]
 [playse  volume="90"  time="1000"  buf="1"  storage="鉄の扉を開ける.mp3"  clear="true"  ]
@@ -104,7 +111,7 @@
 
 [chara_move  name="rui"  anim="false"  time="300"  effect="linear"  wait="true"  width="400"  height="950"  left="150"  top="0"  ]
 [chara_show  name="mizuki"  time="1000"  wait="true"  storage="chara/1/mzk_normal.png"  width="365"  height="865"  left="510"  top="70"  reflect="false"  ]
-[jump  storage="day7.ks"  target="*雑談_好感度高"  cond="f.likability>7"  ]
+[jump  storage="day7.ks"  target="*雑談_好感度高"  cond="f.likability>9"  ]
 [tb_start_text mode=1 ]
 #瑞希
 「……先輩、来てたんだ」[p]
