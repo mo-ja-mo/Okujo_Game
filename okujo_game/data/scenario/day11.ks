@@ -124,7 +124,7 @@
 
 [mask  time="500"  effect="fadeIn"  color="0x000000"  ]
 [bg  time="1000"  method="crossfade"  storage="odoriba.png"  ]
-[mask  time="1000"  effect="fadeIn"  color="0x000000"  ]
+[mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
 僕らは放課後まで屋上に出る扉の前の踊り場で過ごした。[p]
 [_tb_end_text]
