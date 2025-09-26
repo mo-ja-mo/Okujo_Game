@@ -587,6 +587,7 @@
 [playse  volume="100"  time="1000"  buf="0"  storage="自販機からジュースを取り出す音.mp3"  clear="true"  ]
 [chara_hide_all  time="1000"  wait="true"  ]
 [tb_hide_message_window  ]
+[playbgm  volume="100"  time="1000"  loop="true"  storage="BGM/mattari.mp3"  fadein="true"  ]
 [bg  time="1000"  method="crossfade"  storage="イベント/newyear_drink1.png"  ]
 [tb_show_message_window  ]
 [tb_start_text mode=1 ]
