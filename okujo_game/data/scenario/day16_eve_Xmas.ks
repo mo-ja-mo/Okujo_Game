@@ -114,7 +114,7 @@
 [_tb_end_text]
 
 [chara_mod  name="mizuki"  time="600"  cross="true"  storage="chara/1/mzk_smile.png"  ]
-[playbgm  volume="80"  time="1000"  loop="true"  storage="BGM/ジングルベル〜きよしこの夜.mp3"  fadein="true"  ]
+[playbgm  volume="60"  time="1000"  loop="true"  storage="BGM/ジングルベル〜きよしこの夜.mp3"  fadein="true"  ]
 [chara_mod  name="mizuki"  time="0"  cross="false"  storage="chara/1/base.png"  ]
 [chara_part  name="mizuki"  time="600"  santa_bou="santabou_mzk.png"  wait="true"  ]
 [tb_start_text mode=1 ]

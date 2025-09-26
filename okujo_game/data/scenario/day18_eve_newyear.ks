@@ -859,7 +859,6 @@
 [stopbgm  time="1000"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [movie  volume="80"  storage="end_roll.mp4"  ]
-[l  ]
 [bg  time="1000"  method="crossfade"  storage="bg_black.png"  ]
 [tb_ptext_show  x="305"  y="280.00001525878906"  size="30"  color="0xffffff"  time="3000"  text="友情ルート：True&nbsp;End"  face="sans-serif,'メイリオ'"  anim="false"  edge="undefined"  shadow="undefined"  ]
 [tb_ptext_show  x="350"  y="330"  size="30"  color="0xffffff"  time="3000"  text="「未来への約束」"  face="sans-serif,'メイリオ'"  anim="false"  edge="undefined"  shadow="undefined"  ]
