@@ -8,7 +8,7 @@
 
 [tb_eval  exp="f.likability=0"  name="likability"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
 [tb_eval  exp="f.name_flag=0"  name="name_flag"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
-[tb_eval  exp="f.name_flag=0"  name="name_flag"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
+[tb_eval  exp="f.end_flag=0"  name="end_flag"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
 [tb_ptext_hide  time="1000"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [playbgm  volume="80"  time="1000"  loop="true"  storage="BGM/day.mp3"  ]

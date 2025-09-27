@@ -1,177 +1,200 @@
 [_tb_system_call storage=system/_preview.ks ]
 
 [mask time=10]
-[bg  time="10"  method="crossfade"  storage="town2.jpg"  ]
-[playbgm  volume="100"  time="1000"  loop="true"  storage="BGM/ending.mp3"  ]
-[tb_show_message_window] 
-[chara_mod  name="mizuki_sifuku"  time="10"  cross="true"  storage="chara/3/mzk_shihuku_bigsmile.png"  ]
-[chara_mod  name="rui_shifuku"  time="10"  cross="true"  storage="chara/4/rui_shihuku_smile.png"  ]
-[chara_show  name="mizuki_sifuku"  time="10"  wait="true"  storage="chara/3/mzk_shihuku_normal.png"  width="365"  height="865"  left="510"  top="70"  ]
-[chara_show  name="rui_shifuku"  time="10"  wait="true"  storage="chara/4/rui_shihuku_normal.png"  width="400"  height="950"  left="150"  top="0"  reflect="false"  ]
-[chara_move  name="mizuki_sifuku"  anim="false"  time="10"  effect="linear"  wait="false"  left="510"  top="70"  width="365"  height="865"  ]
 [mask_off time=10]
-[chara_hide_all  time="1000"  wait="true"  ]
-[playbgm  volume="100"  time="1000"  loop="true"  storage="BGM/endrole.mp3"  ]
-[mask_off  time="1000"  effect="fadeOut"  ]
-[bg  time="2000"  method="crossfade"  storage="credit.png"  ]
-[l  ]
-[bg  time="1000"  method="crossfade"  storage="bg_black.png"  ]
-[tb_ptext_show  x="305"  y="280.00001525878906"  size="30"  color="0xffffff"  time="3000"  text="友情ルート：Good&nbsp;End"  face="sans-serif,'メイリオ'"  anim="false"  edge="undefined"  shadow="undefined"  ]
-[tb_ptext_show  x="350"  y="330"  size="30"  color="0xffffff"  time="3000"  text="「いつかこの先も」"  face="sans-serif,'メイリオ'"  anim="false"  edge="undefined"  shadow="undefined"  ]
-[l  ]
+*day1_start
+
+
+;2週目対策で各種フラグクリア
+
+
+[tb_eval  exp="f.likability=0"  name="likability"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
+[tb_eval  exp="f.name_flag=0"  name="name_flag"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
+[tb_eval  exp="f.name_flag=0"  name="name_flag"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
 [tb_ptext_hide  time="1000"  ]
-[jump  storage="title_screen.ks"  target=""  ]
+[mask_off  time="1000"  effect="fadeOut"  ]
+[playbgm  volume="80"  time="1000"  loop="true"  storage="BGM/day.mp3"  ]
+[cm  ]
+[bg  storage="room.jpg"  time="1000"  ]
+[tb_ptext_show  x="386.9999694824219"  y="218.00001525878906"  size="50"  color="0xded3d7"  time="2000"  text="Day&nbsp;1"  anim="false"  face="cursive"  edge="undefined"  shadow="0x140e0e"  ]
+[wait  time="1000"  ]
+[tb_show_message_window  ]
+[tb_start_text mode=1 ]
+晴れた月曜日の朝。いつものように登校して、自分の席に座る。[p]
+普段は授業を聞き流しながら脚本を書いたり、演出プランを練ったり、それなりに充実した時間を過ごしているのに、最近はつい窓の外を気にしてしまう。[p]
+今日は比較的気温が高く、雨も降りそうにない。[p]
+瑞希くんは屋上に来ているだろうか？[p]
+[_tb_end_text]
+
+[tb_ptext_hide  time="1000"  ]
+[tb_hide_message_window  ]
+[glink  color="btn_02_black"  storage="day1.ks"  size="20"  x="250"  y="300"  width="200"  text="屋上へ向かう"  target="*屋上に行く"  autopos="false"  height=""  _clickable_img=""  ]
+[glink  color="btn_02_black"  storage="day1.ks"  size="20"  x="530"  y="300"  width="250"  text="もう少し教室にいる"  target="*教室にいる"  autopos="false"  height=""  _clickable_img=""  ]
 [s  ]
-*TrueEnd
+*教室にいる
 
 [tb_show_message_window  ]
 [tb_start_text mode=1 ]
-帰り道、僕らは駅に向かって歩いていた。[p]
-#類
-（今日は楽しかったな。瑞希くんも学校にいる時より楽しそうだったし）[p]
-（……あっという間に終わってしまったな）[p]
-#
+昨日は徹夜で作業に没頭してしまった。[p]
+そのせいかたまらなく眠い。[p]
+少し眠ることにした。[p]
 [_tb_end_text]
 
-[chara_mod  name="rui_shifuku"  time="600"  cross="true"  storage="chara/4/rui_shihuku_smile.png"  ]
-[tb_start_text mode=1 ]
-#類
-「瑞希くん、今日は来てくれてありがとう。お陰で楽しかったよ」[p]
-#
-[_tb_end_text]
+[tb_hide_message_window  ]
+[jump  storage="day1.ks"  target="*day_end"  ]
+[s  ]
+*屋上に行く
 
-[chara_mod  name="mizuki_sifuku"  time="600"  cross="true"  storage="chara/3/mzk_shihuku_smile.png"  ]
+[bg  time="1000"  method="fadeIn"  storage="okujyo_normal.png"  ]
+[tb_show_message_window  ]
+[chara_show  name="mizuki"  time="1000"  wait="true"  storage="chara/1/mzk_normal.png"  width="365"  height="865"  left="320"  top="70"  reflect="false"  ]
 [tb_start_text mode=1 ]
 #瑞希
-「うん、こちらこそだよ。……先輩が誘ってくれてうれしかった」[p]
+「…………」[p]
 #
+瑞希くんは先に来ていたようだ。[p]
+僕は瑞希くんから少し距離を取って座った。[p]
 [_tb_end_text]
 
-[chara_mod  name="rui_shifuku"  time="600"  cross="true"  storage="chara/4/rui_shihuku_normal_sekimen.png"  ]
+
+;定型分岐
+
+
+[tb_hide_message_window  ]
+[glink  color="btn_02_black"  storage="day1.ks"  size="20"  text="様子を見る"  target="*様子を見る"  x="250"  y="200"  width="200"  height=""  _clickable_img=""  ]
+[glink  color="btn_02_black"  storage="day1.ks"  size="20"  target="*雑談をする"  text="雑談をする"  autopos="false"  x="550"  y="200"  width="200"  height=""  _clickable_img=""  ]
+[glink  color="btn_02_black"  storage="day1.ks"  size="20"  text="サプライズをする"  autopos="false"  target="*サプライズをする"  x="250"  y="330"  width="200"  height=""  _clickable_img=""  ]
+[glink  color="btn_02_black"  storage="day1.ks"  size="20"  text="作業をする"  autopos="false"  target="*作業をする"  x="550"  y="330"  width="200"  height=""  _clickable_img=""  ]
+[s  ]
+*様子を見る
+
+[tb_eval  exp="f.likability+=1"  name="likability"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
+[tb_show_message_window  ]
+
+;好感度が設定値以上の場合は「好感度高」の処理にジャンプする
+
+
+[jump  storage="day1.ks"  target="*様子を見る_好感度高"  cond="f.likability>5"  ]
+
+;好感度低の場合
+
+
 [tb_start_text mode=1 ]
+瑞希くんはぼーっと空を見ている。[p]
 #類
-「この間も少し言ったけれど、僕は瑞希くんと屋上で過ごすようになって、学校に来るのが楽しみになったんだ」[p]
-「僕はすぐ自分の考えに没頭してしまって、僕にしか分からない話をしてしまう時もあったりするけれど、いつも嫌な顔せずに聞いてくれてありがとう」[p]
-#瑞希
-「――ボクは、先輩の話聞くの嫌じゃないよ。[p]
-ボクには理解できない内容の時もあるけど、先輩が楽しそうに話してるのを見るの好きだし……そういうのいいなって思うから」[p]
+（話しかけたら、行ってしまいそうだ……）[p]
 #
 [_tb_end_text]
 
-[chara_mod  name="mizuki_sifuku"  time="600"  cross="true"  storage="chara/3/mzk_shihuku_bigsmile.png"  ]
+[jump  storage="day1.ks"  target="*day_end"  ]
+*様子を見る_好感度高
+
 [tb_start_text mode=1 ]
-#瑞希
-「それにボクも……最近は学校に来るの嫌じゃなかったよ」[p]
+様子を見る＿好感度高（1,2日目は設定なし）[p]
+[_tb_end_text]
+
+[jump  storage="day1.ks"  target="*day_end"  ]
+*雑談をする
+
+[chara_move  name="mizuki"  anim="false"  time="300"  effect="linear"  wait="true"  width="365"  height="865"  left="510"  top="70"  ]
+[chara_show  name="rui"  time="1000"  wait="true"  storage="chara/2/rui_normal.png"  width="400"  height="950"  left="150"  top="0"  reflect="false"  ]
+[tb_eval  exp="f.likability+=1"  name="likability"  cmd="+="  op="t"  val="1"  ]
+[tb_show_message_window  ]
+[tb_start_text mode=1 ]
+僕は昨日見たばかりのショーの話をした。[p]
 #類
-（瑞希くんも、少しは僕と同じように思ってくれていると考えていいのだろうか。それなら……）[p]
+（しまった。瑞希くんはショーには興味がないかもしれないのに……）[p]
 #
 [_tb_end_text]
 
-[chara_mod  name="rui_shifuku"  time="600"  cross="true"  storage="chara/4/rui_shihuku_smile.png"  ]
+[jump  storage="day1.ks"  target="*雑談_好感度高"  cond="f.likability>5"  ]
+
+;好感度低の場合
+
+
 [tb_start_text mode=1 ]
+瑞希くんは小さく頷いてくれた。[p]
 #類
-「また誘ってもいいかな？」[p]
+（迷惑そうな顔をされるかと思ったけれど……少なくとも嫌がられているとは思わなくていいのかな）[p]
 #
 [_tb_end_text]
 
-[chara_mod  name="mizuki_sifuku"  time="600"  cross="true"  storage="chara/3/mzk_shihuku_odoroki.png"  ]
+[jump  storage="day1.ks"  target="*day_end"  ]
+[s  ]
+*雑談_好感度高
+
 [tb_start_text mode=1 ]
-#瑞希
-「え？」[p]
+雑談　好感度高（1,2日目は設定なし）[p]
+[_tb_end_text]
+
+[jump  storage="day1.ks"  target="*day_end"  ]
+[s  ]
+*サプライズをする
+
+[tb_eval  exp="f.likability+=1"  name="likability"  cmd="+="  op="t"  val="1"  ]
+[chara_move  name="mizuki"  anim="false"  time="300"  effect="linear"  wait="true"  width="365"  height="865"  left="510"  top="70"  ]
+[chara_show  name="rui"  time="1000"  wait="true"  storage="chara/2/rui_normal.png"  width="400"  height="950"  left="150"  top="0"  reflect="false"  ]
+[tb_show_message_window  ]
+[tb_start_text mode=1 ]
+僕はラムネをポケットから出した。[p]
 #類
-「これからもたまにこうして一緒に出かけられたらうれしいのだけど」[p]
-#
-
-[_tb_end_text]
-
-[chara_mod  name="mizuki_sifuku"  time="600"  cross="true"  storage="chara/3/mzk_shihuku_smile.png"  ]
-[tb_start_text mode=1 ]
-#瑞希
-「！！……うん！ また行こうよ。ボクも今日は楽しかったし」[p]
+「君も食べるかい？」[p]
 #
 [_tb_end_text]
 
-[chara_mod  name="rui_shifuku"  time="600"  cross="true"  storage="chara/4/rui_shihuku_smile_sekimen.png"  ]
+[jump  storage="day1.ks"  target="*サプライズ_好感度高"  cond="f.likability>5"  ]
+
+;好感度低の場合
+
+
 [tb_start_text mode=1 ]
+瑞希くんはちらりと僕を見上げてから、小さく首を振った。[p]
 #類
-「もし迷惑じゃなければだけど、……卒業しても、たまに連絡してもいいかい？せっかく仲良くなれたのに、卒業したら終わりになるのは寂しいからね」[p]
-#瑞希
-「うん、ボクも先輩が卒業してもたまに会えたらうれしいな」[p]
+（まだ警戒されているみたいだ）[p]
 #
 [_tb_end_text]
 
-[chara_mod  name="mizuki_sifuku"  time="600"  cross="true"  storage="chara/3/mzk_shihuku_bigsmile.png"  ]
-[chara_mod  name="rui_shifuku"  time="600"  cross="true"  storage="chara/4/rui_shihuku_takurami.png"  ]
+[jump  storage="day1.ks"  target="*day_end"  ]
+[s  ]
+*サプライズ_好感度高
+
 [tb_start_text mode=1 ]
-#類
-「フフフ、とりあえず三学期も少しでも屋上で快適に過ごせるように、冬休みの間にいろいろ準備しなくてはね」[p]
-#
+サプライズ_好感度高（1,2日目は設定なし）[p]
 [_tb_end_text]
 
-[chara_mod  name="mizuki_sifuku"  time="600"  cross="true"  storage="chara/3/mzk_shihuku_komari.png"  ]
+[jump  storage="day1.ks"  target="*day_end"  ]
+[s  ]
+*作業をする
+
+[tb_eval  exp="f.likability+=1"  name="likability"  cmd="+="  op="t"  val="1"  ]
+[chara_hide  name="mizuki"  time="1000"  wait="true"  pos_mode="true"  ]
+[chara_show  name="rui"  time="1000"  wait="true"  storage="chara/2/rui_normal.png"  width="400"  height="950"  left="280"  top="0"  ]
+[tb_show_message_window  ]
 [tb_start_text mode=1 ]
-#瑞希
-「……先輩がその顔すると、ちょっと不安なんだけど」[p]
-#
+僕は持ってきた装置の製作を進めることにした。[p]
 [_tb_end_text]
 
-[chara_mod  name="rui_shifuku"  time="600"  cross="true"  storage="chara/4/rui_shihuku_nikkori.png"  ]
+[jump  storage="day1.ks"  target="*作業をする_好感度高"  cond="f.likability>5"  ]
+
+;好感度低の場合
+
+
 [tb_start_text mode=1 ]
-#類
-「フフフ。今年もよろしく、瑞希くん」[p]
-#
+瑞希くんは何も言わなかったが、何度か瑞希くんの視線を感じた。[p]
 [_tb_end_text]
 
-[jump  storage="day18_eve_newyear.ks"  target="*呼び捨て終了位置"  cond="f.name_flag==0"  ]
-[chara_mod  name="mizuki_sifuku"  time="600"  cross="true"  storage="chara/3/mzk_shihuku_mesorashi_sekimen.png"  ]
+[jump  storage="day1.ks"  target="*day_end"  ]
+[s  ]
+*作業をする_好感度高
+
 [tb_start_text mode=1 ]
-#瑞希
-「……瑞希でいいよ」[p]
-#類
-「え？」[p]
-#
+作業をする　好感度高（1,2日目は設定なし）[p]
 [_tb_end_text]
 
-[chara_mod  name="rui_shifuku"  time="600"  cross="true"  storage="chara/4/rui_shihuku_mouthopen.png"  ]
-[chara_mod  name="mizuki_sifuku"  time="600"  cross="true"  storage="chara/3/mzk_shihuku_normal.png"  ]
-[tb_start_text mode=1 ]
-#瑞希
-「くん付けされるの、あんまり好きじゃないんだ」[p]
-#
-[_tb_end_text]
+[jump  storage="day1.ks"  target="*day_end"  ]
+[s  ]
+*day_end
 
-[chara_mod  name="rui_shifuku"  time="600"  cross="true"  storage="chara/4/rui_shihuku_aseri.png"  ]
-[tb_start_text mode=1 ]
-#類
-「それはすまなかったね。じゃあ……僕のことも類でいいよ」[p]
-#瑞希
-「……え！？」[p]
-#
-
-[_tb_end_text]
-
-[chara_mod  name="mizuki_sifuku"  time="600"  cross="true"  storage="chara/3/mzk_shihuku_odoroki.png"  ]
-[tb_start_text mode=1 ]
-#類
-「その方がフェアだろう？……僕だけ気恥ずかしい思いをしなくて済むしね」[p]
-#瑞希
-「まぁ……そうかもだけど」[p]
-#類
-「じゃあ、これからよろしくね――瑞希」[p]
-#
-[_tb_end_text]
-
-[chara_mod  name="rui_shifuku"  time="600"  cross="true"  storage="chara/4/rui_shihuku_nikkori.png"  ]
-[chara_mod  name="mizuki_sifuku"  time="600"  cross="true"  storage="chara/3/mzk_shihuku_smile_sekimen.png"  ]
-[tb_start_text mode=1 ]
-#瑞希
-「……っ。うん、よろしく……類」[p]
-#
-[_tb_end_text]
-
-*呼び捨て終了位置
-
-[wait  time="3000"  ]
 [mask  time="1000"  effect="fadeIn"  color="0x000000"  ]
 [tb_hide_message_window  ]
 [tb_ptext_hide  time="1000"  ]
@@ -180,13 +203,5 @@
 [_tb_end_tyrano_code]
 
 [chara_hide_all  time="1000"  wait="true"  ]
-[stopbgm  time="1000"  ]
-[mask_off  time="1000"  effect="fadeOut"  ]
-[movie  volume="80"  storage="end_roll.mp4"  ]
-[bg  time="1000"  method="crossfade"  storage="bg_black.png"  ]
-[tb_ptext_show  x="305"  y="280.00001525878906"  size="30"  color="0xffffff"  time="3000"  text="友情ルート：True&nbsp;End"  face="sans-serif,'メイリオ'"  anim="false"  edge="undefined"  shadow="undefined"  ]
-[tb_ptext_show  x="350"  y="330"  size="30"  color="0xffffff"  time="3000"  text="「未来への約束」"  face="sans-serif,'メイリオ'"  anim="false"  edge="undefined"  shadow="undefined"  ]
-[l  ]
-[tb_ptext_hide  time="1000"  ]
-[jump  storage="title_screen.ks"  target=""  ]
+[jump  storage="day2.ks"  target="*day2_start"  ]
 [s  ]
